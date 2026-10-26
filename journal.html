@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="journal.css" />
+    <title>Journal | Sanskriti Boutique</title>
+  </head>
+  <body>
+    <header class="top-0 left-0 z-30 w-full bg-[var(--sapia-black950)]">
+      <div
+        class="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 sm:px-8 lg:px-10"
+      >
+        <a href="index.html" class="logo shrink-0">
+          <img
+            src="images/logo.png"
+            alt="Heritage logo"
+            class="block w-[204px] max-[868px]:w-[100px] max-[576px]:w-[80px]"
+          />
+        </a>
+
+        <nav class="hidden items-center lg:flex">
+          <a
+            href="index.html"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+            >Collections</a
+          >
+          <a
+            href="#"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+            >What's New</a
+          >
+          <a
+            href="journal.html"
+            class="nav-link active max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+            >Journal</a
+          >
+          <a
+            href="about-us.html"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+            >About us</a
+          >
+        </nav>
+
+        <div class="hidden items-center gap-4 lg:flex">
+          <a href="#" class="icon-link" aria-label="Search"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+          <a href="#" class="icon-link" aria-label="Wishlist"
+            ><i class="fa-regular fa-heart"></i
+          ></a>
+          <a
+            href="login.html"
+            target="_blank"
+            class="icon-link"
+            aria-label="Account"
+            ><i class="fa-regular fa-user"></i
+          ></a>
+          <a href="#" class="icon-link" aria-label="Shopping bag"
+            ><i class="fa-solid fa-bag-shopping"></i
+          ></a>
+        </div>
+
+        <button
+          type="button"
+          id="menuButton"
+          aria-label="Open menu"
+          aria-expanded="false"
+          class="flex h-8 w-8 items-center justify-center !text-[#F7F4EF] lg:hidden"
+        >
+          <i class="fa-solid fa-bars text-sm"></i>
+        </button>
+      </div>
+    </header>
+
+    <div
+      id="mobileOverlay"
+      class="pointer-events-none fixed inset-0 z-40 bg-black/50 opacity-0 transition-opacity duration-300 lg:hidden"
+    ></div>
+
+    <aside
+      id="mobileMenu"
+      aria-hidden="true"
+      class="fixed top-0 right-0 z-50 h-full w-[300px] max-w-[86%] translate-x-full bg-[#8c5e47] px-6 py-6 shadow-2xl transition-transform duration-300 ease-in-out lg:hidden"
+    >
+      <div class="flex items-center justify-between">
+        <img
+          src="images/logo.png"
+          alt="Heritage logo"
+          class="block max-w-[150px]"
+        />
+        <button
+          type="button"
+          id="closeMenu"
+          aria-label="Close menu"
+          class="flex h-8 w-8 items-center justify-center !text-[#260808]"
+        >
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <nav class="mt-12 flex flex-col gap-6">
+        <a href="index.html" class="nav-link !mr-0 !w-max !text-[#4B1912]"
+          >Home</a
+        >
+        <a href="#" class="nav-link !mr-0 !w-max !text-[#4B1912]"
+          >Collections</a
+        >
+        <a href="#" class="nav-link !mr-0 !w-max !text-[#4B1912]">What's New</a>
+        <a
+          href="journal.html"
+          class="nav-link active !mr-0 !w-max !text-[#4B1912]"
+          >Journal</a
+        >
+        <a href="about-us.html" class="nav-link !mr-0 !w-max !text-[#4B1912]"
+          >About us</a
+        >
+      </nav>
+
+      <div class="mt-10 flex items-center gap-6">
+        <a href="#" class="icon-link !mr-0 !text-[#6f2c1f]"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></a>
+        <a href="#" class="icon-link !mr-0 !text-[#6f2c1f]"
+          ><i class="fa-regular fa-heart"></i
+        ></a>
+        <a
+          href="login.html"
+          target="_blank"
+          class="icon-link !mr-0 !text-[#6f2c1f]"
+          ><i class="fa-regular fa-user"></i
+        ></a>
+        <a href="#" class="icon-link !mr-0 !text-[#6f2c1f]"
+          ><i class="fa-solid fa-bag-shopping"></i
+        ></a>
+      </div>
+    </aside>
+
+    <main>
+      <section class="journal-hero">
+        <div class="journal-hero-copy">
+          <h1 class="journal-hero-title">The Language of Banarasi Weaving</h1>
+          <p class="journal-hero-description">
+            Discover the artistry behind Banarasi textiles where intricate
+            motifs, ceremonial symbolism, and handwoven narratives come together
+            to create timeless expressions of heritage. Every weave carries
+            memory, preserving traditions shaped across generations of
+            craftsmanship.
+          </p>
+        </div>
+        <div class="journal-hero-image journal-shine">
+          <img
+            src="images/jounal-hero.png"
+            alt="Banarasi weaving and heritage textiles"
+          />
+        </div>
+      </section>
+
+      <section id="journal-stories" class="journal-stories-section">
+        <div class="journal-toolbar">
+          <p class="journal-toolbar-title">Selected Stories</p>
+          <nav class="journal-categories" aria-label="Journal categories">
+            <a href="#" class="journal-category active"
+              >ALL STORIES</a
+            >
+            <a href="#" class="journal-category"
+              >CRAFT & CULTURE</a
+            >
+            <a href="#" class="journal-category"
+              >TEXTILE TALES</a
+            >
+            <a href="#" class="journal-category"
+              >THE BRIDAL EDIT</a
+            >
+          </nav>
+        </div>
+
+        <div class="journal-masonry">
+          <div class="journal-column journal-column-featured">
+            <article class="journal-story journal-story-feature journal-shine">
+              <img
+                src="images/jounal-left 1.png"
+                alt="Royal bridal heritage story"
+              />
+              <div class="journal-story-overlay">
+                
+                <h2>Royal Narratives Reimagined</h2>
+                <p>
+                  A celebration of regal artistry, timeless silhouettes and the
+                  traditions that continue to inspire modern couture.
+                </p>
+                <a href="#"
+                  >READ THE STORY <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+
+            <article class="journal-story journal-story-feature journal-shine">
+              <img
+                src="images/jounal-left 2.png"
+                alt="Traditional Indian bridal textiles"
+              />
+              <div class="journal-story-overlay">
+               
+                <h2>Threads of Timeless Heritage</h2>
+                <p>
+                  Explore the intricate handwork and heirloom techniques woven
+                  into India's most treasured textiles.
+                </p>
+                <a href="#"
+                  >READ THE STORY <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="journal-column">
+            <article class="journal-story journal-story-card journal-shine">
+              <div class="journal-story-image">
+                <img
+                  src="images/journal-right1.png"
+                  alt="A handcrafted silk ensemble"
+                />
+              </div>
+              <div class="journal-story-content">
+                
+                <h2>Threads of Artisanal Heritage</h2>
+                <p>
+                  Meet the hands and traditions behind the details that make
+                  every piece extraordinary.
+                </p>
+                <a href="#"
+                  >Read the story <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+
+            <article class="journal-story journal-story-card journal-shine">
+              <div class="journal-story-image">
+                <img
+                  src="images/journal-right3.png"
+                  alt="A traditional textile artisan"
+                />
+              </div>
+              <div class="journal-story-content">
+               
+                <h2>Traditions That Endure</h2>
+                <p>
+                  From delicate motifs to rich textures, discover the meaning
+                  woven into every detail.
+                </p>
+                <a href="#"
+                  >Read the story <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+
+            <article class="journal-story journal-story-card journal-shine">
+              <div class="journal-story-image">
+                <img
+                  src="images/journal-right5.png"
+                  alt="A contemporary heirloom look"
+                />
+              </div>
+              <div class="journal-story-content">
+             
+                <h2>Modern Heirlooms</h2>
+                <p>
+                  Where the grace of the past meets the spirit of a new
+                  generation.
+                </p>
+                <a href="#"
+                  >Read the story <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="journal-story journal-story-card journal-shine">
+              <div class="journal-story-image">
+                <img
+                  src="images/journal-right7.png"
+                  alt="A contemporary heirloom look"
+                />
+              </div>
+              <div class="journal-story-content">
+               
+                <h2>Modern Heirlooms</h2>
+                <p>
+                  Where the grace of the past meets the spirit of a new
+                  generation.
+                </p>
+                <a href="#"
+                  >Read the story <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="journal-story journal-story-card journal-shine">
+              <div class="journal-story-image">
+                <img
+                  src="images/journal-right1.png"
+                  alt="A handcrafted silk ensemble"
+                />
+              </div>
+              <div class="journal-story-content">
+               
+                <h2>Threads of Artisanal Heritage</h2>
+                <p>
+                  Meet the hands and traditions behind the details that make
+                  every piece extraordinary.
+                </p>
+                <a href="#"
+                  >Read the story <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="journal-column">
+            <article class="journal-story journal-story-card journal-shine">
+              <div class="journal-story-image">
+                <img
+                  src="images/journal-right2.png"
+                  alt="An artisan working with traditional materials"
+                />
+              </div>
+              <div class="journal-story-content">
+                
+                <h2>The Beauty of Detail</h2>
+                <p>
+                  Look closer at the patient artistry that gives each creation
+                  its own character.
+                </p>
+                <a href="#"
+                  >Read the story <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+
+            <article class="journal-story journal-story-card journal-shine">
+              <div class="journal-story-image">
+                <img
+                  src="images/journal-right4.png"
+                  alt="A bridal look in rich traditional colours"
+                />
+              </div>
+              <div class="journal-story-content">
+               
+                <h2>A Celebration in Every Thread</h2>
+                <p>
+                  Stories of colour, craft and meaningful moments, made to be
+                  cherished.
+                </p>
+                <a href="#"
+                  >Read the story <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+
+            <article class="journal-story journal-story-card journal-shine">
+              <div class="journal-story-image">
+                <img
+                  src="images/journal-right6.png"
+                  alt="A woman wearing a heritage-inspired ensemble"
+                />
+              </div>
+              <div class="journal-story-content">
+              
+                <h2>Elegance, Reimagined</h2>
+                <p>
+                  Discover thoughtful ways to bring heritage craftsmanship into
+                  today's wardrobe.
+                </p>
+                <a href="#"
+                  >Read the story <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="journal-story journal-story-card journal-shine">
+              <div class="journal-story-image">
+                <img
+                  src="images/journal-right8.png"
+                  alt="A woman wearing a heritage-inspired ensemble"
+                />
+              </div>
+              <div class="journal-story-content">
+               
+                <h2>Elegance, Reimagined</h2>
+                <p>
+                  Discover thoughtful ways to bring heritage craftsmanship into
+                  today's wardrobe.
+                </p>
+                <a href="#"
+                  >Read the story <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="journal-story journal-story-card journal-shine">
+              <div class="journal-story-image">
+                <img
+                  src="images/journal-right2.png"
+                  alt="An artisan working with traditional materials"
+                />
+              </div>
+              <div class="journal-story-content">
+                
+                <h2>The Beauty of Detail</h2>
+                <p>
+                  Look closer at the patient artistry that gives each creation
+                  its own character.
+                </p>
+                <a href="#"
+                  >Read the story <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+   <footer class="site-footer">
+      <img src="images/Footer-bg.png" alt="" class="footer-bg-img" />
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img
+                src="images/logo-footer.png"
+                alt="Sanskruti Logo"
+                class="footer-logo-img"
+              />
+            </div>
+            <div class="footer-heading">
+              Timeless craftsmanship. Unforgettable celebrations.
+            </div>
+            <div
+              class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+            >
+              <img
+                src="images/common pattern.png"
+                alt="pattern"
+                class="block w-full"
+              />
+            </div>
+            <p class="footer-description">
+              Sanskruti is where heritage artistry meets contemporary elegance —
+              thoughtfully crafted for weddings, festivities, and moments that
+              deserve timeless beauty.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-link-column">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="about-us.html">About us</a></li>
+              </ul>
+            </div>
+            <div class="footer-link-column">
+              <ul>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Bridal Couture</a></li>
+                <li><a href="#">Festive Edit</a></li>
+                <li><a href="#">Raasleela Atelier</a></li>
+                <li><a href="#">Occasion Wear</a></li>
+                <li><a href="#">Heritage Weaves</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Signature Series</a></li>
+              </ul>
+            </div>
+            <div class="footer-link-column">
+              <ul>
+                <li><a href="#">Customer Care</a></li>
+                <li><a href="#">Craftsmanship</a></li>
+                <li><a href="#">Care Journal</a></li>
+                <li><a href="#">Care Guide</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping & Delivery</a></li>
+                <li><a href="#">Returns & Exchange</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-boutique">
+            <div
+              class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+            >
+              <img
+                src="images/common pattern.png"
+                alt="pattern"
+                class="block w-full"
+              />
+            </div>
+            <div class="boutique-title">Boutique</div>
+            <div class="boutique-info">
+              <div class="boutique-address">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <p>
+                  Sanskruti Boutique 212 Emporio, Vasant Kunj New Delhi — 110070
+                </p>
+              </div>
+              <div class="boutique-phone">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <a href="tel:+91 11 4100 5678">+91 11 4100 5678</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" rel="noopener"
+            >Instagram</a
+          >
+          <a href="https://pinterest.com" target="_blank" rel="noopener"
+            >Pinterest</a
+          >
+          <a href="https://facebook.com" target="_blank" rel="noopener"
+            >Facebook</a
+          >
+          <a href="https://youtube.com" target="_blank" rel="noopener"
+            >YouTube</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

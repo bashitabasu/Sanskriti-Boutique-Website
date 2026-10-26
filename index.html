@@ -1,0 +1,2839 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fancyboc css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Sanskriti Boutique</title>
+  </head>
+
+  <body>
+    <header class="absolute top-2 left-0 z-30 w-full">
+      <div
+        class="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 sm:px-8 lg:px-10"
+      >
+        <a href="index.html" class="logo shrink-0 max-w-[204px]">
+          <img
+            src="images/logo.png"
+            alt="Heritage logo"
+            class="block max-[868px]:w-[100px] max-[576px]:w-[80px]"
+          />
+        </a>
+
+        <nav class="hidden items-center lg:flex">
+          <a
+            href="index.html"
+            class="nav-link active max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+          >
+            Home
+          </a>
+
+          <a
+            href="#"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+          >
+            Collections
+          </a>
+
+          <a
+            href="#"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+          >
+            What's New
+          </a>
+
+          <a
+            href="journal.html"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+          >
+            Journal
+          </a>
+
+          <a
+            href="about-us.html"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+          >
+            About us
+          </a>
+        </nav>
+
+        <div class="hidden items-center gap-4 lg:flex">
+          <a href="#" class="icon-link" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+
+          <a href="#" class="icon-link" aria-label="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </a>
+
+          <a
+            href="login.html"
+            target="_blank"
+            class="icon-link"
+            aria-label="Account"
+          >
+            <i class="fa-regular fa-user"></i>
+          </a>
+
+          <a href="#" class="icon-link" aria-label="Shopping bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </a>
+        </div>
+
+        <button
+          type="button"
+          id="menuButton"
+          aria-label="Open menu"
+          aria-expanded="false"
+          class="flex h-8 w-8 items-center justify-center !text-[#F7F4EF] lg:hidden"
+        >
+          <i class="fa-solid fa-bars text-sm"></i>
+        </button>
+      </div>
+    </header>
+
+    <div
+      id="mobileOverlay"
+      class="pointer-events-none fixed inset-0 z-40 bg-black/50 opacity-0 transition-opacity duration-300 lg:hidden"
+    ></div>
+
+    <aside
+      id="mobileMenu"
+      aria-hidden="true"
+      class="fixed top-0 right-0 z-50 h-full w-[300px] max-w-[86%] translate-x-full bg-[#8c5e47] px-6 py-6 shadow-2xl transition-transform duration-300 ease-in-out lg:hidden"
+    >
+      <div class="flex items-center justify-between">
+        <img
+          src="images/logo.png"
+          alt="Heritage logo"
+          class="block max-w-[150px]"
+        />
+
+        <button
+          type="button"
+          id="closeMenu"
+          aria-label="Close menu"
+          class="flex h-8 w-8 items-center justify-center !text-[#260808]"
+        >
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <nav class="mt-12 flex flex-col gap-6">
+        <a href="#" class="nav-link active !mr-0 !w-max !text-[#4B1912]">
+          Home
+        </a>
+
+        <a href="#" class="nav-link !mr-0 !w-max !text-[#4B1912]">
+          Collections
+        </a>
+
+        <a href="#" class="nav-link !mr-0 !w-max !text-[#4B1912]">
+          What's New
+        </a>
+
+        <a href="journal.html" class="nav-link !mr-0 !w-max !text-[#4B1912]"> Journal </a>
+
+        <a href="about-us.html" class="nav-link !mr-0 !w-max !text-[#4B1912]"> About us </a>
+      </nav>
+
+      <div class="mt-10 flex items-center gap-6">
+        <a href="#" class="icon-link !mr-0 !text-[#6f2c1f]">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <a href="#" class="icon-link !mr-0 !text-[#6f2c1f]">
+          <i class="fa-regular fa-heart"></i>
+        </a>
+
+        <a
+          href="login.html"
+          target="_blank"
+          class="icon-link !mr-0 !text-[#6f2c1f]"
+        >
+          <i class="fa-regular fa-user"></i>
+        </a>
+
+        <a href="#" class="icon-link !mr-0 !text-[#6f2c1f]">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <section class="relative w-full overflow-hidden">
+        <img
+          src="images/hero-img.jpg"
+          alt="heritage image"
+          class="block h-[520px] w-full object-cover object-center min-[376px]:h-[560px] min-[576px]:h-[620px] min-[769px]:h-auto"
+        />
+
+        <div class="absolute inset-0">
+          <div
+            class="relative mx-auto h-full w-full max-w-[1440px] px-5 sm:px-8 lg:px-10"
+          >
+            <div
+              class="hero-title-position absolute text-center !top-[10%] !left-[5%] min-[320px]:!top-[28%] min-[320px]:!left-[18%] min-[376px]:!top-[24%] min-[376px]:!left-[18%] min-[426px]:!top-[20%] min-[426px]:!left-[18%] min-[576px]:!top-[20%] min-[576px]:!left-[10%] min-[769px]:!top-[17%] min-[769px]:!left-[9%] min-[868px]:!top-[18%] min-[868px]:!left-[10%] min-[1025px]:!top-[20%] min-[1025px]:!left-[12%] min-[1201px]:!top-[20%] min-[1201px]:!left-[12%] min-[1301px]:!top-[16%] min-[1301px]:!left-[10%]"
+            >
+              <h1
+                class="hero-title !text-[36px] !leading-[1] min-[320px]:!text-[36px] min-[376px]:!text-[38px] min-[426px]:!text-[40px] min-[576px]:!text-[52px] min-[769px]:!text-[62px] min-[868px]:!text-[70px] min-[1025px]:!text-[90px] min-[1201px]:!text-[100px] min-[1301px]:!text-[132px]"
+              >
+                DRAPED IN
+              </h1>
+
+              <div
+                class="heritage-word !text-[36px] !translate-x-[28px] !translate-y-[-8px] min-[320px]:!text-[36px] min-[320px]:!translate-x-[34px] min-[320px]:!translate-y-[-48px] min-[376px]:!text-[38px] min-[376px]:!translate-x-[34px] min-[376px]:!translate-y-[-40px] min-[426px]:!text-[40px] min-[426px]:!translate-x-[42px] min-[426px]:!translate-y-[-44px] min-[576px]:!text-[43px] min-[576px]:!translate-x-[55px] min-[576px]:!translate-y-[-44px] min-[769px]:!text-[50px] min-[769px]:!translate-x-[75px] min-[769px]:!translate-y-[-22px] min-[868px]:!text-[56px] min-[868px]:!translate-x-[95px] min-[868px]:!translate-y-[-28px] min-[1025px]:!text-[70px] min-[1025px]:!translate-x-[125px] min-[1025px]:!translate-y-[-35px] min-[1201px]:!text-[80px] min-[1201px]:!translate-x-[145px] min-[1201px]:!translate-y-[-40px] min-[1301px]:!text-[100px] min-[1301px]:!translate-x-[200px] min-[1301px]:!translate-y-[-55px]"
+              >
+                heritage
+              </div>
+            </div>
+
+            <div
+              class="hero-copy-position absolute !left-[2%] !bottom-[2%] min-[320px] min-[376px] min-[426px] min-[576px]  !bottom-[16%]  min-[769px]:!left-[2%] min-[769px]  !bottom-[16%]  min-[868px]:!left-[2%] min-[868px]  min-[1025px]:!left-[2%] min-[1025px] min-[1201px]:!left-[2%] min-[1201px]:!bottom-[10%] min-[1301px]:!left-[2%] min-[1301px]:!bottom-[10%]"
+            >
+              <p
+                class="hero-copy !w-full !max-w-[260px] !text-[12px] min-[376px]:!max-w-[280px] min-[376px]:!text-[12px] min-[426px]:!max-w-[300px] min-[426px]:!text-[12px] min-[576px]:!max-w-[280px] min-[576px]:!text-[14px] min-[769px]:!max-w-[330px] min-[769px]:!text-[14px] min-[868px]:!max-w-[360px] min-[868px]:!text-[16px] min-[1025px]:!max-w-[480px] min-[1025px]:!text-[16px] min-[1201px]:!max-w-[500px] min-[1301px]:!max-w-[673px] min-[1301px]:!text-[18px]"
+              >
+                Rooted in heritage and crafted with timeless artistry, each
+                drape reflects the richness of Indian craftsmanship through
+                refined silhouettes, intricate textures, and contemporary
+                elegance.
+              </p>
+
+              <a
+                href="#"
+                class="collection-button inline-flex items-center !gap-[7px] !mt-[7px] !px-[10px] !py-[6px] !text-[7px] min-[376px]:!gap-[8px] min-[376px]:!mt-[8px] min-[376px]:!px-[11px] min-[376px]:!py-[7px] min-[376px]:!text-[7.5px] min-[426px]:!mt-[9px] min-[426px]:!px-[13px] min-[426px]:!py-[8px] min-[426px]:!text-[8px] min-[576px]:!gap-[10px] min-[576px]:!mt-[11px] min-[576px]:!px-[15px] min-[576px]:!py-[9px] min-[576px]:!text-[9px] min-[769px]:!gap-[12px] min-[769px]:!mt-[14px] min-[769px]:!px-[18px] min-[769px]:!py-[10px] min-[769px]:!text-[11px] min-[868px]:!px-[22px] min-[868px]:!py-[12px] min-[868px]:!text-[13px] min-[1025px]:!px-[25px] min-[1025px]:!py-[13px] min-[1025px]:!text-[14px] min-[1301px]:!gap-[24px] min-[1301px]:!mt-[24px] min-[1301px]:!px-[30px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+              >
+                <span> Explore Collection </span>
+
+                <span
+                  class="arrow-wrap !h-[10px] !w-[10px] min-[576px]:!h-[12px] min-[576px]:!w-[12px] min-[769px]:!h-[13px] min-[769px]:!w-[13px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 1st section -->
+      <section
+        class="reimagined-section !py-[45px] min-[576px]:!py-[50px] min-[769px]:!py-[60px] min-[992px]:!py-[75px] min-[1301px]:!py-[95px]"
+      >
+        <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-10">
+          <div
+            class="reimagined-layout !grid !grid-cols-1 !gap-[35px] min-[992px]:!grid-cols-[34%_66%] min-[992px]:!gap-0 min-[1301px]:!grid-cols-[30%_70%]"
+          >
+            <div
+              class="reimagined-content !pr-0 max-[991px]:!text-center max-[991px]:!flex max-[991px]:!flex-col max-[991px]:!items-center min-[992px]:!pr-[40px]"
+            >
+              <div
+                class="reimagined-title !w-auto !max-w-full !whitespace-nowrap !text-[56px] min-[320px]:!text-[24px] min-[376px]:!text-[24px] min-[426px]:!text-[26px] min-[576px]:!text-[29px] min-[769px]:!text-[34px] min-[993px]:!max-w-[420px] min-[1081px]:!max-w-[500px] min-[1200px]:!max-w-[554px]"
+              >
+                <span
+                  class="!text-[56px] min-[320px]:!text-[26px] min-[376px]:!text-[26px] min-[426px]:!text-[26px] min-[576px]:!text-[29px] min-[769px]:!text-[34px] min-[992px]:!text-[40px]"
+                >
+                  tradition
+                </span>
+
+                Reimagined
+              </div>
+
+              <p
+                class="reimagined-text !w-full !max-w-[225px] !mt-[24px] !text-[12px] min-[376px]:!max-w-[240px] min-[376px]:!text-[12px] min-[426px]:!max-w-[255px] min-[426px]:!text-[12px] min-[576px]:!max-w-[280px] min-[576px]:!text-[14px] min-[769px]:!max-w-[330px] min-[769px]:!text-[16px] min-[992px]:!max-w-[500px] min-[992px]:!text-[16px] min-[1301px]:!text-[18px]"
+              >
+                A curated collection of richly woven Indian silhouettes designed
+                to celebrate heritage through contemporary craft and culture.
+              </p>
+
+              <div
+                class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+              >
+                <img
+                  src="images/common pattern.png"
+                  alt="pattern"
+                  class="block w-full"
+                />
+              </div>
+
+              <div
+                class="product-arrows !mt-[25px] !justify-center min-[769px]:!mt-[30px] min-[992px]:!mt-[80px] min-[992px]:!justify-start min-[1301px]:!mt-[110px]"
+              >
+                <button
+                  type="button"
+                  id="productPrev"
+                  class="product-arrow"
+                  aria-label="Previous"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                  type="button"
+                  id="productNext"
+                  class="product-arrow"
+                  aria-label="Next"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="product-viewport">
+              <div class="swiper productSwiper">
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide product-card !h-[470px] min-[376px]:!h-[490px] min-[576px]:!h-[510px] min-[769px]:!h-[540px] min-[992px]:!h-[570px] min-[1301px]:!h-[600px]"
+                  >
+                    <div class="product-image-wrap">
+                      <img
+                        src="images/tradition reimagine 1.jpg"
+                        alt="Rang Mahal Zari Saree"
+                        class="!p-[14px] min-[576px]:!p-[12px] min-[769px]:!p-[10px]"
+                      />
+                    </div>
+
+                    <div
+                      class="product-card-content !px-[10px] !pt-[14px] min-[576px]:!px-[12px] min-[576px]:!pt-[16px] min-[769px]:!px-[15px] min-[769px]:!pt-[20px] min-[992px]:!px-[18px] min-[992px]:!pt-[25px] min-[1301px]:!pl-[20px] min-[1301px]:!pt-[30px]"
+                    >
+                      <h4
+                        class="!w-full !max-w-[200px] !text-[18px] !leading-[1] min-[376px]:!text-[20px] min-[576px]:!text-[20px] min-[769px]:!text-[20px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                      >
+                        Rang Mahal Zari Saree
+                      </h4>
+
+                      <p
+                        class="!w-full !max-w-[400px] !h-auto !mt-[12px] !mb-[15px] !text-[10px] !leading-[1.2] min-[376px]:!max-w-[220px] min-[376px]:!text-[10px] min-[426px]:!text-[12px] min-[576px]:!max-w-[250px] min-[576px]:!text-[12px] min-[769px]:!text-[14px] min-[992px]:!text-[14px] min-[1301px]:!mt-[30px] min-[1301px]:!mb-[30px] min-[1301px]:!text-[16px]"
+                      >
+                        Traditional bandhani silk saree finished with
+                        handcrafted embroidery and zari edging.
+                      </p>
+
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <h4
+                          class="product-price !w-auto !text-[20px] min-[576px]:!text-[20px] min-[769px]:!text-[20px] min-[992px]:!text-[20px] min-[1301px]:!text-[26px]"
+                        >
+                          ₹18,950
+                        </h4>
+
+                        <a
+                          href="#"
+                          class="shop-button !gap-[10px] !text-[16px]"
+                        >
+                          Shop Now
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="swiper-slide product-card !h-[470px] min-[376px]:!h-[490px] min-[576px]:!h-[510px] min-[769px]:!h-[540px] min-[992px]:!h-[570px] min-[1301px]:!h-[600px]"
+                  >
+                    <div class="product-image-wrap">
+                      <img
+                        src="images/tradition reimagine 2.jpg"
+                        alt="Noor Bandhani Drape"
+                        class="!p-[14px] min-[576px]:!p-[12px] min-[769px]:!p-[10px]"
+                      />
+                    </div>
+
+                    <div
+                      class="product-card-content !px-[10px] !pt-[14px] min-[576px]:!px-[12px] min-[576px]:!pt-[16px] min-[769px]:!px-[15px] min-[769px]:!pt-[20px] min-[992px]:!px-[18px] min-[992px]:!pt-[25px] min-[1301px]:!pl-[20px] min-[1301px]:!pt-[30px]"
+                    >
+                      <h4
+                        class="!w-full !max-w-[200px] !text-[18px] !leading-[1] min-[376px]:!text-[20px] min-[576px]:!text-[20px] min-[769px]:!text-[20px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                      >
+                        Noor Bandhani Drape
+                      </h4>
+
+                      <p
+                        class="!w-full !max-w-[400px] !h-auto !mt-[12px] !mb-[15px] !text-[10px] !leading-[1.2] min-[376px]:!max-w-[220px] min-[376px]:!text-[10px] min-[426px]:!text-[12px] min-[576px]:!max-w-[250px] min-[576px]:!text-[12px] min-[769px]:!text-[14px] min-[992px]:!text-[14px] min-[1301px]:!mt-[30px] min-[1301px]:!mb-[30px] min-[1301px]:!text-[16px]"
+                      >
+                        Traditional bandhani silk saree finished with
+                        handcrafted embroidery and zari edging.
+                      </p>
+
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <h4
+                          class="product-price !w-auto !text-[18px] min-[576px]:!text-[18px] min-[769px]:!text-[22px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                        >
+                          ₹16,800
+                        </h4>
+
+                        <a href="#" class="shop-button !gap-[10px]">
+                          Shop Now
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="swiper-slide product-card !h-[470px] min-[376px]:!h-[490px] min-[576px]:!h-[510px] min-[769px]:!h-[540px] min-[992px]:!h-[570px] min-[1301px]:!h-[600px]"
+                  >
+                    <div class="product-image-wrap">
+                      <img
+                        src="images/tradition reimagine 3.jpg"
+                        alt="Maharaja Bandhgala Edit"
+                        class="!p-[14px] min-[576px]:!p-[12px] min-[769px]:!p-[10px]"
+                      />
+                    </div>
+
+                    <div
+                      class="product-card-content !px-[10px] !pt-[14px] min-[576px]:!px-[12px] min-[576px]:!pt-[16px] min-[769px]:!px-[15px] min-[769px]:!pt-[20px] min-[992px]:!px-[18px] min-[992px]:!pt-[25px] min-[1301px]:!pl-[20px] min-[1301px]:!pt-[30px]"
+                    >
+                      <h4
+                        class="!w-full !max-w-[500px] !text-[18px] !leading-[1] min-[376px]:!text-[20px] min-[576px]:!text-[20px] min-[769px]:!text-[20px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                      >
+                        Maharaja Bandhgala Edit
+                      </h4>
+
+                      <p
+                        class="!w-full !max-w-[500px] !h-auto !mt-[12px] !mb-[15px] !text-[10px] !leading-[1.2] min-[376px]:!max-w-[220px] min-[376px]:!text-[10px] min-[426px]:!text-[12px] min-[576px]:!max-w-[250px] min-[576px]:!text-[12px] min-[769px]:!text-[14px] min-[992px]:!text-[14px] min-[1301px]:!mt-[30px] min-[1301px]:!mb-[30px] min-[1301px]:!text-[16px]"
+                      >
+                        Structured heritage jacket with antique finishing. Royal
+                        groom silhouette with intricate thread.
+                      </p>
+
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <h4
+                          class="product-price !w-auto !text-[18px] min-[576px]:!text-[20px] min-[769px]:!text-[22px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                        >
+                          ₹20,800
+                        </h4>
+
+                        <a href="#" class="shop-button !gap-[10px]">
+                          Shop Now
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="swiper-slide product-card !h-[470px] min-[376px]:!h-[490px] min-[576px]:!h-[510px] min-[769px]:!h-[540px] min-[992px]:!h-[570px] min-[1301px]:!h-[600px]"
+                  >
+                    <div class="product-image-wrap">
+                      <img
+                        src="images/tradition reimagine 4.jpg"
+                        alt="Gulnaar Bridal Weave"
+                        class="!p-[14px] min-[576px]:!p-[12px] min-[769px]:!p-[10px]"
+                      />
+                    </div>
+
+                    <div
+                      class="product-card-content !px-[10px] !pt-[14px] min-[576px]:!px-[12px] min-[576px]:!pt-[16px] min-[769px]:!px-[15px] min-[769px]:!pt-[20px] min-[992px]:!px-[18px] min-[992px]:!pt-[25px] min-[1301px]:!pl-[20px] min-[1301px]:!pt-[30px]"
+                    >
+                      <h4
+                        class="!w-full !max-w-[200px] !text-[18px] !leading-[1] min-[376px]:!text-[20px] min-[576px]:!text-[20px] min-[769px]:!text-[20px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                      >
+                        Gulnaar Bridal Weave
+                      </h4>
+
+                      <p
+                        class="!w-full !max-w-[400px] !h-auto !mt-[12px] !mb-[15px] !text-[10px] !leading-[1.2] min-[376px]:!max-w-[220px] min-[376px]:!text-[10px] min-[426px]:!text-[12px] min-[576px]:!max-w-[250px] min-[576px]:!text-[12px] min-[769px]:!text-[14px] min-[992px]:!text-[14px] min-[1301px]:!mt-[30px] min-[1301px]:!mb-[30px] min-[1301px]:!text-[16px]:w-[200px]"
+                      >
+                        Statement bridal saree with rich pallu detailing and
+                        layered gold threadwork.
+                      </p>
+
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <h4
+                          class="product-price !w-auto !text-[18px] min-[576px]:!text-[20px] min-[769px]:!text-[22px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                        >
+                          ₹19,600
+                        </h4>
+
+                        <a href="#" class="shop-button !gap-[10px]">
+                          Shop Now
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="swiper-slide product-card !h-[470px] min-[376px]:!h-[490px] min-[576px]:!h-[510px] min-[769px]:!h-[540px] min-[992px]:!h-[570px] min-[1301px]:!h-[600px]"
+                  >
+                    <div class="product-image-wrap">
+                      <img
+                        src="images/tradition reimagine 5.jpg"
+                        alt="Mehr Crimson Edit"
+                        class="!p-[14px] min-[576px]:!p-[12px] min-[769px]:!p-[10px]"
+                      />
+                    </div>
+
+                    <div
+                      class="product-card-content !px-[10px] !pt-[14px] min-[576px]:!px-[12px] min-[576px]:!pt-[16px] min-[769px]:!px-[15px] min-[769px]:!pt-[20px] min-[992px]:!px-[18px] min-[992px]:!pt-[25px] min-[1301px]:!pl-[20px] min-[1301px]:!pt-[30px]"
+                    >
+                      <h4
+                        class="!w-full !max-w-[200px] !text-[18px] !leading-[1] min-[376px]:!text-[20px] min-[576px]:!text-[20px] min-[769px]:!text-[20px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                      >
+                        Mehr Crimson Edit
+                      </h4>
+
+                      <p
+                        class="!w-full !max-w-[400px] !h-auto !mt-[12px] !mb-[15px] !text-[10px] !leading-[1.2] min-[376px]:!max-w-[220px] min-[376px]:!text-[10px] min-[426px]:!text-[12px] min-[576px]:!max-w-[250px] min-[576px]:!text-[12px] min-[769px]:!text-[14px] min-[992px]:!text-[14px] min-[1301px]:!mt-[30px] min-[1301px]:!mb-[30px] min-[1301px]:!text-[16px]"
+                      >
+                        Muted crimson festive saree with delicate woven patterns
+                        and lightweight drape.
+                      </p>
+
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <h4
+                          class="product-price !w-auto !text-[18px] min-[320px]:!text-[20px] min-[576px]:!text-[20px] min-[769px]:!text-[22px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                        >
+                          ₹14,750
+                        </h4>
+
+                        <a href="#" class="shop-button !gap-[10px]">
+                          Shop Now
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="swiper-slide product-card !h-[470px] min-[376px]:!h-[490px] min-[576px]:!h-[510px] min-[769px]:!h-[540px] min-[992px]:!h-[570px] min-[1301px]:!h-[600px]"
+                  >
+                    <div class="product-image-wrap">
+                      <img
+                        src="images/tradition reimagine 6.jpg"
+                        alt="Riwaayat Banarasi Silk"
+                        class="!p-[14px] min-[576px]:!p-[12px] min-[769px]:!p-[10px]"
+                      />
+                    </div>
+
+                    <div
+                      class="product-card-content !px-[10px] !pt-[14px] min-[576px]:!px-[12px] min-[576px]:!pt-[16px] min-[769px]:!px-[15px] min-[769px]:!pt-[20px] min-[992px]:!px-[18px] min-[992px]:!pt-[25px] min-[1301px]:!pl-[20px] min-[1301px]:!pt-[30px]"
+                    >
+                      <h4
+                        class="!w-full !max-w-[200px] !text-[18px] !leading-[1] min-[376px]:!text-[20px] min-[576px]:!text-[20px] min-[769px]:!text-[20px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                      >
+                        Riwaayat Banarasi Silk
+                      </h4>
+
+                      <p
+                        class="!w-full !max-w-[400px] !h-auto !mt-[12px] !mb-[15px] !text-[10px] !leading-[1.2] min-[376px]:!max-w-[220px] min-[376px]:!text-[10px] min-[426px]:!text-[12px] min-[576px]:!max-w-[250px] min-[576px]:!text-[12px] min-[769px]:!text-[14px] min-[992px]:!text-[14px] min-[1301px]:!mt-[30px] min-[1301px]:!mb-[30px] min-[1301px]:!text-[16px]"
+                      >
+                        Classic Banarasi drape inspired by royal textile
+                        archives. Royal groom silhouette with intricate thread.
+                      </p>
+
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <h4
+                          class="product-price !w-auto !text-[18px] min-[576px]:!text-[20px] min-[769px]:!text-[22px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                        >
+                          ₹22,900
+                        </h4>
+
+                        <a href="#" class="shop-button !gap-[10px]">
+                          Shop Now
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="swiper-slide product-card !h-[470px] min-[376px]:!h-[490px] min-[576px]:!h-[510px] min-[769px]:!h-[540px] min-[992px]:!h-[570px] min-[1301px]:!h-[600px]"
+                  >
+                    <div class="product-image-wrap">
+                      <img
+                        src="images/tradition reimagine 7.jpg"
+                        alt="Zeenat Cape Set"
+                        class="!p-[14px] min-[576px]:!p-[12px] min-[769px]:!p-[10px]"
+                      />
+                    </div>
+
+                    <div
+                      class="product-card-content !px-[10px] !pt-[14px] min-[576px]:!px-[12px] min-[576px]:!pt-[16px] min-[769px]:!px-[15px] min-[769px]:!pt-[20px] min-[992px]:!px-[18px] min-[992px]:!pt-[25px] min-[1301px]:!pl-[20px] min-[1301px]:!pt-[30px]"
+                    >
+                      <h4
+                        class="!w-full !max-w-[200px] !text-[18px] !leading-[1] min-[376px]:!text-[20px] min-[576px]:!text-[20px] min-[769px]:!text-[20px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                      >
+                        Zeenat Cape Set
+                      </h4>
+
+                      <p
+                        class="!w-full !max-w-[210px] !h-auto !mt-[12px] !mb-[15px] !text-[10px] !leading-[1.2] min-[376px]:!max-w-[220px] min-[376px]:!text-[10px] min-[426px]:!text-[12px] min-[576px]:!max-w-[250px] min-[576px]:!text-[12px] min-[769px]:!text-[14px] min-[992px]:!text-[14px] min-[1301px]:!mt-[30px] min-[1301px]:!mb-[30px] min-[1301px]:!text-[16px]"
+                      >
+                        Layered festive cape ensemble with soft movement and
+                        couture styling.
+                      </p>
+
+                      <div
+                        class="product-bottom !mt-0 !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mt-[58px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <h4
+                          class="product-price !w-auto !text-[18px] min-[576px]:!text-[20px] min-[769px]:!text-[22px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                        >
+                          ₹19,800
+                        </h4>
+
+                        <a href="#" class="shop-button !gap-[10px]">
+                          Shop Now
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="swiper-slide product-card !h-[470px] min-[376px]:!h-[490px] min-[576px]:!h-[510px] min-[769px]:!h-[540px] min-[992px]:!h-[570px] min-[1301px]:!h-[600px]"
+                  >
+                    <div class="product-image-wrap">
+                      <img
+                        src="images/tradition reimagine 8.jpg"
+                        alt="Rajwada Bridal Sherwani"
+                        class="!p-[14px] min-[576px]:!p-[12px] min-[769px]:!p-[10px]"
+                      />
+                    </div>
+
+                    <div
+                      class="product-card-content !px-[10px] !pt-[14px] min-[576px]:!px-[12px] min-[576px]:!pt-[16px] min-[769px]:!px-[15px] min-[769px]:!pt-[20px] min-[992px]:!px-[18px] min-[992px]:!pt-[25px] min-[1301px]:!pl-[20px] min-[1301px]:!pt-[30px]"
+                    >
+                      <h4
+                        class="!w-full !max-w-[200px] !text-[18px] !leading-[1] min-[376px]:!text-[20px] min-[576px]:!text-[20px] min-[769px]:!text-[20px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                      >
+                        Rajwada Bridal Sherwani
+                      </h4>
+
+                      <p
+                        class="!w-full !max-w-[210px] !h-auto !mt-[12px] !mb-[15px] !text-[10px] !leading-[1.2] min-[376px]:!max-w-[220px] min-[376px]:!text-[10px] min-[426px]:!text-[12px] min-[576px]:!max-w-[250px] min-[576px]:!text-[12px] min-[769px]:!text-[14px] min-[992px]:!text-[14px] min-[1301px]:!mt-[30px] min-[1301px]:!mb-[30px] min-[1301px]:!text-[16px]"
+                      >
+                        Royal groom silhouette with intricate thread embroidery
+                        with Layered festive cape.
+                      </p>
+
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <h4
+                          class="product-price !w-auto !text-[18px] min-[576px]:!text-[20px] min-[769px]:!text-[22px] min-[992px]:!text-[24px] min-[1301px]:!text-[26px]"
+                        >
+                          ₹9,950
+                        </h4>
+
+                        <a href="#" class="shop-button !gap-[10px]">
+                          Shop Now
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 2nd section -->
+      <section
+        class="heritage-section !py-[40px] min-[376px]:!py-[45px] min-[576px]:!py-[50px] min-[769px]:!py-[60px] min-[992px]:!py-[60px] min-[1200px]:!py-[65px] min-[1301px]:!py-[100px]"
+      >
+        <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-10">
+          <div class="heritage-heading">
+            <h2 class="heritage-main-title">
+              <span
+                class="!mr-[5px] !text-[26px] min-[376px]:!text-[28px] min-[426px]:!text-[30px] min-[576px]:!mr-[8px] min-[576px]:!text-[32px] min-[769px]:!text-[34px] min-[992px]:!mr-[12px] min-[992px]:!text-[38px] min-[1200px]:!text-[42px] min-[1301px]:!mr-[16px] min-[1301px]:!text-[56px]"
+              >
+                THE
+              </span>
+
+              <strong
+                class="!text-[26px] min-[376px]:!text-[28px] min-[426px]:!text-[30px] min-[576px]:!text-[32px] min-[769px]:!text-[34px] min-[992px]:!text-[38px] min-[1200px]:!text-[42px] min-[1301px]:!text-[56px]"
+              >
+                house of heritage
+              </strong>
+            </h2>
+
+            <div
+              class="heading-ornament heritage-ornament !mx-auto !w-[200px] !h-[60px] !pl-[15px] !pt-[25px] min-[376px]:!w-[220px] min-[426px]:!w-[250px] min-[576px]:!w-[280px] min-[769px]:!w-[320px] min-[992px]:!w-[364px] min-[1301px]:!h-[82px] min-[1301px]:!pl-[30px] min-[1301px]:!pt-[40px]"
+            >
+              <img
+                src="images/common pattern.png"
+                alt="pattern"
+                class="block w-full"
+              />
+            </div>
+          </div>
+
+          <div
+            class="heritage-viewport !pt-[18px] min-[576px]:!pt-[20px] min-[769px]:!pt-[24px] min-[992px]:!max-w-[760px] min-[1200px]:!max-w-[900px] min-[1301px]:!max-w-[1440px]"
+          >
+            <div class="swiper heritageSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide heritage-slide">
+                  <img src="images/home-3rd section swiper.png" alt="" />
+                </div>
+
+                <div class="swiper-slide heritage-slide">
+                  <img src="images/home-3rd section swiper 2.png" alt="" />
+                </div>
+
+                <div class="swiper-slide heritage-slide">
+                  <img src="images/home-3rd section swiper 3.png" alt="" />
+                </div>
+
+                <div class="swiper-slide heritage-slide">
+                  <img src="images/home-3rd section swiper 4.png" alt="" />
+                </div>
+
+                <div class="swiper-slide heritage-slide">
+                  <img src="images/home-3rd section swiper 5.png" alt="" />
+                </div>
+
+                <div class="swiper-slide heritage-slide">
+                  <img src="images/home-3rd section swiper 6.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="heritage-progress-area !max-w-[270px] !mt-[18px] !gap-[10px] min-[426px]:!max-w-[300px] min-[576px]:!max-w-[592px] min-[576px]:!mt-[50px] min-[769px]:!mt-[50px] min-[992px]:!mt-[50px] min-[1301px]:!mt-[50px]"
+          >
+            <div class="heritage-progress-track">
+              <div id="heritageProgress" class="heritage-progress-fill"></div>
+            </div>
+
+            <h4
+              id="heritageCounter"
+              class="heritage-counter !ml-[10px] !text-[8px] min-[376px]:!text-[9px] min-[576px]:!ml-[24px] min-[576px]:!text-[32px]"
+            >
+              1/6
+            </h4>
+          </div>
+
+          <div
+            class="heritage-info !mt-[14px] min-[376px]:!mt-[18px] min-[576px]:!mt-[18px] min-[769px]:!mt-[35px] min-[992px]:!mt-[35px]"
+          >
+            <h3
+              class="!text-[22px] min-[376px]:!text-[24px] min-[576px]:!text-[28px] min-[769px]:!text-[32px] min-[992px]:!text-[40px]"
+            >
+              Heritage Drapes
+            </h3>
+
+            <div
+              class="mx-auto flex w-full max-w-[280px] items-center justify-center gap-[8px] min-[376px]:!max-w-[300px] min-[576px]:!max-w-[360px] min-[769px]:!max-w-[500px] min-[992px]:!max-w-[720px]"
+            >
+              <button
+                type="button"
+                id="heritagePrev"
+                class="heritage-arrow shrink-0"
+                aria-label="Previous collection"
+              >
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <p
+                class="!pt-2 !w-full !max-w-[215px] !text-[18px] !leading-[1.2] min-[376px]:!max-w-[230px] min-[376px]:!text-[14px] min-[576px]:!max-w-[270px] min-[576px]:!text-[16px] min-[769px]:!max-w-[360px] min-[769px]:!text-[16px] min-[992px]:!max-w-[550px] min-[992px]:!text-[16px]"
+              >
+                Timeless sarees, richly draped and celebrated in silhouettes
+                inspired by India's heritage.
+              </p>
+
+              <button
+                type="button"
+                id="heritageNext"
+                class="heritage-arrow shrink-0"
+                aria-label="Next collection"
+              >
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <a
+              href="#"
+              class="collection-button inline-flex items-center !gap-[7px] !mt-[32px]"
+            >
+              <span> Explore Collection </span>
+
+              <span
+                class="arrow-wrap !h-[10px] !w-[10px] min-[576px]:!h-[12px] min-[576px]:!w-[12px] min-[769px]:!h-[13px] min-[769px]:!w-[13px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- 3rd section -->
+
+      <section
+        class="heritage-edits-section !py-[40px] min-[376px]:!py-[45px] min-[576px]:!py-[50px] min-[769px]:!py-[60px] min-[992px]:!py-[70px] min-[1301px]:!py-[100px]"
+      >
+        <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-10">
+          <div
+            class="grid grid-cols-1 gap-[35px] lg:grid-cols-2 lg:gap-[50px] xl:gap-[80px] items-start lg:h-[650px]"
+          >
+            <!-- accordian part -->
+
+            <div class="heritage-edits-content text-center w-full">
+              <h2
+                class="heritage-edits-title font-begum !text-[28px] min-[376px]:!text-[30px] min-[576px]:!text-[36px] min-[992px]:!text-[46px] min-[1301px]:!text-[56px]"
+              >
+                Curated Heritage
+                <span
+                  class="text-center font-begum !text-[26px] min-[376px]:!text-[28px] min-[576px]:!text-[30px] min-[992px]:!text-[46px] min-[1301px]:!text-[56px]"
+                  >edits</span
+                >
+              </h2>
+
+              <div
+                class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+              >
+                <img
+                  src="images/common pattern.png"
+                  alt="pattern"
+                  class="block w-full"
+                />
+              </div>
+
+              <div class="accordion !mt-[30px] sm:!mt-[35px] lg:!mt-[40px]">
+                <!-- 01 -->
+
+                <div class="accordion-item">
+                  <button
+                    type="button"
+                    class="accordion-button flex w-full items-center justify-between !py-[15px] sm:!py-[18px] md:!py-[20px]"
+                  >
+                    <span class="flex items-center gap-[12px] sm:gap-[16px]">
+                      <span
+                        class="plus flex h-[18px] w-[18px] items-center justify-center !text-[18px] sm:!h-[20px] sm:!w-[20px] sm:!text-[20px]"
+                      >
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+
+                      <span
+                        class="heading !text-[11px] sm:!text-[13px] md:!text-[14px] lg:!text-[15px]"
+                      >
+                        THE ZARI EDIT
+                      </span>
+                    </span>
+                  </button>
+
+                  <div
+                    class="accordion-content hidden !px-[30px] !pb-[18px] sm:!px-[36px] sm:!pb-[20px]"
+                  >
+                    <p
+                      class="!min-h-[60px] !text-[8px] sm:!text-[10px] md:!text-[11px]"
+                    >
+                      Rich woven textures, intricate zari craftsmanship, and
+                      graceful silhouettes come together in a collection
+                      designed to celebrate timeless Indian artistry. Crafted
+                      for festive occasions and grand celebrations, each
+                      ensemble reflects understated luxury with contemporary
+                      elegance.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 02 -->
+
+                <div class="accordion-item">
+                  <button
+                    type="button"
+                    class="accordion-button flex w-full items-center justify-between !py-[15px] sm:!py-[18px] md:!py-[20px]"
+                  >
+                    <span class="flex items-center gap-[12px] sm:gap-[16px]">
+                      <span
+                        class="plus flex h-[18px] w-[18px] items-center justify-center !text-[18px] sm:!h-[20px] sm:!w-[20px] sm:!text-[20px]"
+                      >
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+
+                      <span
+                        class="heading !text-[11px] sm:!text-[13px] md:!text-[14px] lg:!text-[15px]"
+                      >
+                        HOUSE OF NOOR
+                      </span>
+                    </span>
+                  </button>
+
+                  <div
+                    class="accordion-content hidden !px-[30px] !pb-[18px] sm:!px-[36px] sm:!pb-[20px]"
+                  >
+                    <p
+                      class="!min-h-[60px] !text-[8px] sm:!text-[10px] md:!text-[11px]"
+                    >
+                      Rich woven textures, intricate zari craftsmanship, and
+                      graceful silhouettes come together in a collection
+                      designed to celebrate timeless Indian artistry. Crafted
+                      for festive occasions and grand celebrations, each
+                      ensemble reflects understated luxury with contemporary
+                      elegance.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 03 -->
+
+                <div class="accordion-item">
+                  <button
+                    type="button"
+                    class="accordion-button flex w-full items-center justify-between !py-[15px] sm:!py-[18px] md:!py-[20px]"
+                  >
+                    <span class="flex items-center gap-[12px] sm:gap-[16px]">
+                      <span
+                        class="plus flex h-[18px] w-[18px] items-center justify-center !text-[18px] sm:!h-[20px] sm:!w-[20px] sm:!text-[20px]"
+                      >
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+
+                      <span
+                        class="heading !text-[11px] sm:!text-[13px] md:!text-[14px] lg:!text-[15px]"
+                      >
+                        CRIMSON HEIRLOOMS
+                      </span>
+                    </span>
+                  </button>
+
+                  <div
+                    class="accordion-content hidden !px-[30px] !pb-[18px] sm:!px-[36px] sm:!pb-[20px]"
+                  >
+                    <p
+                      class="!min-h-[60px] !text-[8px] sm:!text-[10px] md:!text-[11px]"
+                    >
+                      Rich woven textures, intricate zari craftsmanship, and
+                      graceful silhouettes come together in a collection
+                      designed to celebrate timeless Indian artistry. Crafted
+                      for festive occasions and grand celebrations, each
+                      ensemble reflects understated luxury with contemporary
+                      elegance.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 04 -->
+
+                <div class="accordion-item">
+                  <button
+                    type="button"
+                    class="accordion-button flex w-full items-center justify-between !py-[15px] sm:!py-[18px] md:!py-[20px]"
+                  >
+                    <span class="flex items-center gap-[12px] sm:gap-[16px]">
+                      <span
+                        class="plus flex h-[18px] w-[18px] items-center justify-center !text-[18px] sm:!h-[20px] sm:!w-[20px] sm:!text-[20px]"
+                      >
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+
+                      <span
+                        class="heading !text-[11px] sm:!text-[13px] md:!text-[14px] lg:!text-[15px]"
+                      >
+                        THE FESTIVE ATELIER
+                      </span>
+                    </span>
+                  </button>
+
+                  <div
+                    class="accordion-content hidden !px-[30px] !pb-[18px] sm:!px-[36px] sm:!pb-[20px]"
+                  >
+                    <p
+                      class="!min-h-[60px] !text-[8px] sm:!text-[10px] md:!text-[11px]"
+                    >
+                      Rich woven textures, intricate zari craftsmanship, and
+                      graceful silhouettes come together in a collection
+                      designed to celebrate timeless Indian artistry. Crafted
+                      for festive occasions and grand celebrations, each
+                      ensemble reflects understated luxury with contemporary
+                      elegance.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 05 -->
+
+                <div class="accordion-item">
+                  <button
+                    type="button"
+                    class="accordion-button flex w-full items-center justify-between !py-[15px] sm:!py-[18px] md:!py-[20px]"
+                  >
+                    <span class="flex items-center gap-[12px] sm:gap-[16px]">
+                      <span
+                        class="plus flex h-[18px] w-[18px] items-center justify-center !text-[18px] sm:!h-[20px] sm:!w-[20px] sm:!text-[20px]"
+                      >
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+
+                      <span
+                        class="heading !text-[11px] sm:!text-[13px] md:!text-[14px] lg:!text-[15px]"
+                      >
+                        SILK STORIES
+                      </span>
+                    </span>
+                  </button>
+
+                  <div
+                    class="accordion-content hidden !px-[30px] !pb-[18px] sm:!px-[36px] sm:!pb-[20px]"
+                  >
+                    <p
+                      class="!min-h-[60px] !text-[8px] sm:!text-[10px] md:!text-[11px]"
+                    >
+                      Rich woven textures, intricate zari craftsmanship, and
+                      graceful silhouettes come together in a collection
+                      designed to celebrate timeless Indian artistry. Crafted
+                      for festive occasions and grand celebrations, each
+                      ensemble reflects understated luxury with contemporary
+                      elegance.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 06 -->
+
+                <div class="accordion-item">
+                  <button
+                    type="button"
+                    class="accordion-button flex w-full items-center justify-between !py-[15px] sm:!py-[18px] md:!py-[20px]"
+                  >
+                    <span class="flex items-center gap-[12px] sm:gap-[16px]">
+                      <span
+                        class="plus flex h-[18px] w-[18px] items-center justify-center !text-[18px] sm:!h-[20px] sm:!w-[20px] sm:!text-[20px]"
+                      >
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+
+                      <span
+                        class="heading !text-[11px] sm:!text-[13px] md:!text-[14px] lg:!text-[15px]"
+                      >
+                        THE COUTURE ARCHIVE
+                      </span>
+                    </span>
+                  </button>
+
+                  <div
+                    class="accordion-content hidden !px-[30px] !pb-[18px] sm:!px-[36px] sm:!pb-[20px]"
+                  >
+                    <p
+                      class="!min-h-[60px] !text-[8px] sm:!text-[10px] md:!text-[11px]"
+                    >
+                      Rich woven textures, intricate zari craftsmanship, and
+                      graceful silhouettes come together in a collection.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- right part -->
+
+            <div class="heritage-edits-image w-full overflow-hidden">
+              <img
+                src="images/home-4th section.png"
+                alt="The Culture Archive"
+                class="block h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 4th section -->
+
+      <section
+        class="most-cherished !py-[40px] min-[576px]:!py-[50px] min-[992px]:!py-[70px] min-[1301px]:!py-[100px]"
+      >
+        <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-10">
+          <!-- HEADING + TABS -->
+          <div
+            class="mb-[30px] flex flex-col gap-[25px] min-[576px]:mb-[40px] min-[1024px]:mb-[55px] min-[1024px]:flex-row min-[1024px]:items-end min-[1024px]:justify-between"
+          >
+            <div class="text-center min-[1024px]:text-left">
+              <h2
+                class="cherished-title !text-[28px] min-[376px]:!text-[30px] min-[576px]:!text-[36px] min-[992px]:!text-[46px] min-[1301px]:!text-[56px]"
+              >
+                MOST <span>cherished</span>
+              </h2>
+
+              <div
+                class="heading-ornament !mx-auto !mt-[20px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[1024px]:!mx-0"
+              >
+                <img
+                  src="images/common pattern.png"
+                  alt="pattern"
+                  class="block w-full"
+                />
+              </div>
+            </div>
+
+            <div class="min-w-0 min-[1024px]:w-[50%]">
+              <div
+                class="cherished-tabs flex items-center  min-[1200px]:justify-between min-[1200px] overflow-auto max-[1024px]: justify-between"
+              >
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  class="cherished-tab active whitespace-nowrap"
+                  data-slide="0"
+                >
+                  Bridal Couture
+                </button>
+
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  class="cherished-tab whitespace-nowrap"
+                  data-slide="1"
+                >
+                  Festive Drapes
+                </button>
+
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  class="cherished-tab whitespace-nowrap"
+                  data-slide="2"
+                >
+                  Evening Elegance
+                </button>
+
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  class="cherished-tab whitespace-nowrap"
+                  data-slide="3"
+                >
+                  Modern Heirlooms
+                </button>
+
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  class="cherished-tab whitespace-nowrap"
+                  data-slide="4"
+                >
+                  Timeless Classics
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDER -->
+          <div class="swiper cherishedSwiper overflow-hidden">
+            <div class="swiper-wrapper">
+              <!-- slider 1 -->
+              <div class="swiper-slide">
+                <div
+                  class="grid grid-cols-1 gap-[24px] min-[768px]:grid-cols-2 min-[1024px]:grid-cols-[1.89fr_1fr_1fr]"
+                >
+                  <div
+                    class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                  >
+                    <div class="aspect-[842/957] w-full bg-[var(--rock200)]">
+                      <img
+                        src="images/most-cherished 1.png"
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+
+                    <div
+                      class="p-[22px] min-[576px]:p-[28px] min-[992px]:p-[32px] min-[1301px]:p-[38px]"
+                    >
+                      <p
+                        class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                      >
+                        The Crimson Edit
+                      </p>
+
+                      <h3
+                        class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] leading-normal min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                      >
+                        Banarasi Zari Saree
+                      </h3>
+
+                      <p
+                        class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                      >
+                        Handwoven textures, regal zari craftsmanship, and
+                        timeless silhouettes curated for grand celebrations and
+                        unforgettable festive moments.
+                      </p>
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <p
+                          class="font-[avenir-roman] text-[28px] text-[var(--rock400-price)]"
+                        >
+                          ₹ 38,500
+                        </p>
+
+                        <a
+                          href="#"
+                          class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                        >
+                          <span>Shop Now</span>
+                          <span
+                            class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                          >
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-[24px]">
+                    <div
+                      class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                    >
+                      <div class="aspect-[445/447] w-full bg-[var(--rock200)]">
+                        <img
+                          src="images/most-cherished 2.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      <div
+                        class="p-[22px] min-[576px]:p-[26px] min-[992px]:p-[28px]"
+                      >
+                        <p
+                          class="mb-[16px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                        >
+                          Modern Maharani
+                        </p>
+
+                        <h3
+                          class="!mb-[16px] !text-[28px] text-[var(--sapia-black950)] leading-normal min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                        >
+                          Embroidered Silk Ensemble
+                        </h3>
+
+                        <p
+                          class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                        >
+                          Contemporary ethnic elegance crafted through fluid
+                          drapes, refined embroidery, and graceful festive
+                          sophistication.
+                        </p>
+                        <div
+                          class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                        >
+                          <p
+                            class="font-[avenir-roman] text-[20px] text-[var(--rock400-price)]"
+                          >
+                            ₹ 25,800
+                          </p>
+
+                          <a
+                            href="#"
+                            class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                          >
+                            <span>Shop Now</span>
+                            <span
+                              class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                            >
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex min-h-[300px] flex-col items-center justify-center px-[25px] py-[35px] text-center min-[992px]:min-h-[360px]"
+                    >
+                      <p
+                        class="max-w-[350px] font-[fontstyle-demo-italic] text-[40px] leading-[1.35] text-[var(--h2-rock800)] min-[576px]:text-[25px] min-[992px]:text-[28px]"
+                      >
+                        “An ode to heirloom textures, graceful femininity, and
+                        modern sophistication.”
+                      </p>
+
+                      <div
+                        class="heading-ornament !mt-[35px] !w-[180px] min-[576px]:!w-[220px] min-[992px]:!w-[291px]"
+                      >
+                        <img
+                          src="images/common pattern.png"
+                          alt="pattern"
+                          class="block w-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- RIGHT COLUMN -->
+                  <div class="flex flex-col justify-end">
+                    <div
+                      class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                    >
+                      <div class="aspect-[445/447] w-full bg-[var(--rock200)]">
+                        <img
+                          src="images/most-cherished 3.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      <div
+                        class="p-[22px] min-[576px]:p-[26px] min-[992px]:p-[28px]"
+                      >
+                        <p
+                          class="mb-[16px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                        >
+                          Sutradhara
+                        </p>
+
+                        <h3
+                          class="!mb-[16px] !text-[28px] text-[var(--sapia-black950)] leading-normal min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                        >
+                          Handcrafted Festive Drape
+                        </h3>
+
+                        <p
+                          class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                        >
+                          Classic Indian craftsmanship reimagined through
+                          luxurious detailing and timeless contemporary couture.
+                        </p>
+                        <div
+                          class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                        >
+                          <p
+                            class="font-[avenir-roman] text-[18px] text-[var(--rock400-price)]"
+                          >
+                            ₹31,200
+                          </p>
+                          <a
+                            href="#"
+                            class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                          >
+                            <span>Shop Now</span>
+                            <span
+                              class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                            >
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================== SLIDE 2 ==================== -->
+              <div class="swiper-slide">
+                <div
+                  class="grid grid-cols-1 gap-[24px] min-[768px]:grid-cols-2 min-[1024px]:grid-cols-[1.89fr_1fr_1fr]"
+                >
+                  <div
+                    class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                  >
+                    <div class="aspect-[842/957] w-full bg-[var(--rock200)]">
+                      <img
+                        src="images/most-cherished 1-slider 3.png"
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+
+                    <div
+                      class="p-[22px] min-[576px]:p-[28px] min-[992px]:p-[32px] min-[1301px]:p-[38px]"
+                    >
+                      <p
+                        class="mb-[16px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                      >
+                        Festive Stories
+                      </p>
+
+                      <h3
+                        class="!mb-[16px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                      >
+                        Zari Festive Saree
+                      </h3>
+
+                      <p
+                        class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                      >
+                        Rich textures and graceful silhouettes designed for
+                        celebrations.
+                      </p>
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <p
+                          class="font-[avenir-roman] text-[28px] text-[var(--rock400-price)]"
+                        >
+                          ₹ 24,500
+                        </p>
+
+                        <a
+                          href="#"
+                          class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                        >
+                          <span>Shop Now</span>
+                          <span
+                            class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                          >
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-[24px]">
+                    <div
+                      class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                    >
+                      <div class="aspect-[445/447] w-full bg-[var(--rock200)]">
+                        <img
+                          src="images/most-cherished 2-slider 2.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      <div
+                        class="p-[22px] min-[576px]:p-[26px] min-[992px]:p-[28px]"
+                      >
+                        <p
+                          class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                        >
+                          Festive Atelier
+                        </p>
+
+                        <h3
+                          class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                        >
+                          Embroidered Festive Set
+                        </h3>
+
+                        <p
+                          class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                        >
+                          Delicate embroidery and fluid drapes for festive
+                          evenings.
+                        </p>
+
+                        <div
+                          class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                        >
+                          <p
+                            class="font-[avenir-roman] text-[20px] text-[var(--rock400-price)]"
+                          >
+                            ₹ 21,800
+                          </p>
+                          <a
+                            href="#"
+                            class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                          >
+                            <span>Shop Now</span>
+                            <span
+                              class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                            >
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex min-h-[300px] flex-col items-center justify-center px-[25px] py-[35px] text-center min-[992px]:min-h-[360px]"
+                    >
+                      <p
+                        class="max-w-[350px] font-[begum] text-[22px] leading-[1.35] text-[var(--h2-rock800)] min-[576px]:text-[25px] min-[992px]:text-[28px]"
+                      >
+                        “An ode to heirloom textures, graceful femininity, and
+                        modern sophistication.”
+                      </p>
+
+                      <div
+                        class="heading-ornament !mt-[35px] !w-[180px] min-[576px]:!w-[220px] min-[992px]:!w-[291px]"
+                      >
+                        <img
+                          src="images/common pattern.png"
+                          alt="pattern"
+                          class="block w-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col justify-end">
+                    <div
+                      class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                    >
+                      <div class="aspect-[445/447] w-full bg-[var(--rock200)]">
+                        <img
+                          src="images/most-cherished 3-slider 3.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      <div
+                        class="p-[22px] min-[576px]:p-[26px] min-[992px]:p-[28px]"
+                      >
+                        <p
+                          class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                        >
+                          House of Noor
+                        </p>
+
+                        <h3
+                          class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                        >
+                          Silk Occasion Drape
+                        </h3>
+
+                        <p
+                          class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                        >
+                          Lightweight silk with antique zari borders.
+                        </p>
+
+                        <div
+                          class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                        >
+                          <p
+                            class="font-[avenir-roman] text-[18px] text-[var(--rock400-price)]"
+                          >
+                            ₹ 18,900
+                          </p>
+                          <a
+                            href="#"
+                            class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                          >
+                            <span>Shop Now</span>
+                            <span
+                              class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                            >
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================== SLIDE 3 ==================== -->
+              <div class="swiper-slide">
+                <div
+                  class="grid grid-cols-1 gap-[24px] min-[768px]:grid-cols-2 min-[1024px]:grid-cols-[1.89fr_1fr_1fr]"
+                >
+                  <div
+                    class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                  >
+                    <div class="aspect-[842/957] w-full bg-[var(--rock200)]">
+                      <img
+                        src="images/most-cherished 1.png"
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+
+                    <div
+                      class="p-[22px] min-[576px]:p-[28px] min-[992px]:p-[32px] min-[1301px]:p-[38px]"
+                    >
+                      <p
+                        class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                      >
+                        After Dark
+                      </p>
+
+                      <h3
+                        class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                      >
+                        Evening Silk Saree
+                      </h3>
+
+                      <p
+                        class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                      >
+                        Sophisticated pieces created for elegant evenings and
+                        intimate celebrations.
+                      </p>
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <p
+                          class="font-[avenir-roman] text-[28px] text-[var(--rock400-price)]"
+                        >
+                          ₹ 29,500
+                        </p>
+
+                        <a
+                          href="#"
+                          class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                        >
+                          <span>Shop Now</span>
+                          <span
+                            class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                          >
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-[24px]">
+                    <div
+                      class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                    >
+                      <div class="aspect-[445/447] w-full bg-[var(--rock200)]">
+                        <img
+                          src="images/most-cherished 2.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      <div
+                        class="p-[22px] min-[576px]:p-[26px] min-[992px]:p-[28px]"
+                      >
+                        <p
+                          class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                        >
+                          Evening Edit
+                        </p>
+
+                        <h3
+                          class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                        >
+                          Structured Couture Gown
+                        </h3>
+
+                        <p
+                          class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                        >
+                          Sculpted lines with heritage-inspired detailing.
+                        </p>
+                        <div
+                          class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                        >
+                          <p
+                            class="font-[avenir-roman] text-[20px] text-[var(--rock400-price)]"
+                          >
+                            ₹ 27,200
+                          </p>
+
+                          <a
+                            href="#"
+                            class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                          >
+                            <span>Shop Now</span>
+                            <span
+                              class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                            >
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex min-h-[300px] flex-col items-center justify-center px-[25px] py-[35px] text-center min-[992px]:min-h-[360px]"
+                    >
+                      <p
+                        class="max-w-[350px] font-[begum] text-[22px] leading-[1.35] text-[var(--h2-rock800)] min-[576px]:text-[25px] min-[992px]:text-[28px]"
+                      >
+                        “Where timeless craft meets contemporary elegance.”
+                      </p>
+
+                      <div
+                        class="heading-ornament !mt-[35px] !w-[180px] min-[576px]:!w-[220px] min-[992px]:!w-[291px]"
+                      >
+                        <img
+                          src="images/common pattern.png"
+                          alt="pattern"
+                          class="block w-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col justify-end">
+                    <div
+                      class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                    >
+                      <div class="aspect-[445/447] w-full bg-[var(--rock200)]">
+                        <img
+                          src="images/most-cherished 3.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      <div
+                        class="p-[22px] min-[576px]:p-[26px] min-[992px]:p-[28px]"
+                      >
+                        <p
+                          class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                        >
+                          Midnight Weave
+                        </p>
+
+                        <h3
+                          class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                        >
+                          Noir Zari Drape
+                        </h3>
+
+                        <p
+                          class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                        >
+                          Deep tones woven with subtle gold threadwork.
+                        </p>
+                        <div
+                          class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                        >
+                          <p
+                            class="font-[avenir-roman] text-[18px] text-[var(--rock400-price)]"
+                          >
+                            ₹ 23,400
+                          </p>
+
+                          <a
+                            href="#"
+                            class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                          >
+                            <span>Shop Now</span>
+                            <span
+                              class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                            >
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================== SLIDE 4 ==================== -->
+              <div class="swiper-slide">
+                <div
+                  class="grid grid-cols-1 gap-[24px] min-[768px]:grid-cols-2 min-[1024px]:grid-cols-[1.89fr_1fr_1fr]"
+                >
+                  <div
+                    class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                  >
+                    <div class="aspect-[842/957] w-full bg-[var(--rock200)]">
+                      <img
+                        src="images/most-cherished 1-slider 2.png"
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+
+                    <div
+                      class="p-[22px] min-[576px]:p-[28px] min-[992px]:p-[32px] min-[1301px]:p-[38px]"
+                    >
+                      <p
+                        class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                      >
+                        Modern Heritage
+                      </p>
+
+                      <h3
+                        class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                      >
+                        Contemporary Heirloom Saree
+                      </h3>
+
+                      <p
+                        class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                      >
+                        Heritage-inspired craftsmanship reimagined for the
+                        modern wardrobe.
+                      </p>
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <p
+                          class="font-[avenir-roman] text-[28px] text-[var(--rock400-price)]"
+                        >
+                          ₹ 26,800
+                        </p>
+
+                        <a
+                          href="#"
+                          class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                        >
+                          <span>Shop Now</span>
+                          <span
+                            class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                          >
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-[24px]">
+                    <div
+                      class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                    >
+                      <div class="aspect-[445/447] w-full bg-[var(--rock200)]">
+                        <img
+                          src="images/most-cherished 2-slider 2.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      <div
+                        class="p-[22px] min-[576px]:p-[26px] min-[992px]:p-[28px]"
+                      >
+                        <p
+                          class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                        >
+                          Modern Heirlooms
+                        </p>
+
+                        <h3
+                          class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                        >
+                          Fusion Drape Set
+                        </h3>
+
+                        <p
+                          class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                        >
+                          Classic textiles styled in a fresh, modern silhouette.
+                        </p>
+                        <div
+                          class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                        >
+                          <p
+                            class="font-[avenir-roman] text-[20px] text-[var(--rock400-price)]"
+                          >
+                            ₹ 19,950
+                          </p>
+
+                          <a
+                            href="#"
+                            class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                          >
+                            <span>Shop Now</span>
+                            <span
+                              class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                            >
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex min-h-[300px] flex-col items-center justify-center px-[25px] py-[35px] text-center min-[992px]:min-h-[360px]"
+                    >
+                      <p
+                        class="max-w-[350px] font-[fontstyle-demo-italic] text-[40px] leading-[1.35] text-[var(--h2-rock800)] min-[576px]:text-[25px] min-[992px]:text-[28px]"
+                      >
+                        “An ode to heirloom textures, graceful femininity, and
+                        modern sophistication.”
+                      </p>
+
+                      <div
+                        class="heading-ornament !mt-[35px] !w-[180px] min-[576px]:!w-[220px] min-[992px]:!w-[291px]"
+                      >
+                        <img
+                          src="images/common pattern.png"
+                          alt="pattern"
+                          class="block w-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col justify-end">
+                    <div
+                      class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                    >
+                      <div class="aspect-[445/447] w-full bg-[var(--rock200)]">
+                        <img
+                          src="images/most-cherished 3-slider 2.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      <div
+                        class="p-[22px] min-[576px]:p-[26px] min-[992px]:p-[28px]"
+                      >
+                        <p
+                          class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                        >
+                          New Archive
+                        </p>
+
+                        <h3
+                          class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                        >
+                          Handloom Cape Set
+                        </h3>
+
+                        <p
+                          class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                        >
+                          Handloom textures layered with couture finishing.
+                        </p>
+                        <div
+                          class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                        >
+                          <p
+                            class="font-[avenir-roman] text-[18px] text-[var(--rock400-price)]"
+                          >
+                            ₹ 22,100
+                          </p>
+                          <a
+                            href="#"
+                            class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                          >
+                            <span>Shop Now</span>
+                            <span
+                              class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                            >
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================== SLIDE 5 ==================== -->
+              <div class="swiper-slide">
+                <div
+                  class="grid grid-cols-1 gap-[24px] min-[768px]:grid-cols-2 min-[1024px]:grid-cols-[1.89fr_1fr_1fr]"
+                >
+                  <div
+                    class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                  >
+                    <div class="aspect-[842/957] w-full bg-[var(--rock200)]">
+                      <img
+                        src="images/most-cherished 1-slider 3.png"
+                        alt=""
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+
+                    <div
+                      class="p-[22px] min-[576px]:p-[28px] min-[992px]:p-[32px] min-[1301px]:p-[38px]"
+                    >
+                      <p
+                        class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                      >
+                        The Classics
+                      </p>
+
+                      <h3
+                        class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                      >
+                        Signature Banarasi
+                      </h3>
+
+                      <p
+                        class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                      >
+                        Iconic silhouettes celebrating the enduring beauty of
+                        Indian textiles.
+                      </p>
+                      <div
+                        class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                      >
+                        <p
+                          class="font-[avenir-roman] text-[28px] text-[var(--rock400-price)]"
+                        >
+                          ₹ 34,000
+                        </p>
+                        <a
+                          href="#"
+                          class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                        >
+                          <span>Shop Now</span>
+                          <span
+                            class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                          >
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-[24px]">
+                    <div
+                      class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                    >
+                      <div class="aspect-[445/447] w-full bg-[var(--rock200)]">
+                        <img
+                          src="images/most-cherished 2-slider 3.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      <div
+                        class="p-[22px] min-[576px]:p-[26px] min-[992px]:p-[28px]"
+                      >
+                        <p
+                          class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                        >
+                          Timeless Classics
+                        </p>
+
+                        <h3
+                          class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                        >
+                          Heritage Silk Saree
+                        </h3>
+
+                        <p
+                          class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                        >
+                          A everyday-luxury drape woven with traditional motifs.
+                        </p>
+                        <div
+                          class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                        >
+                          <p
+                            class="font-[avenir-roman] text-[20px] text-[var(--rock400-price)]"
+                          >
+                            ₹ 20,500
+                          </p>
+                          <a
+                            href="#"
+                            class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                          >
+                            <span>Shop Now</span>
+                            <span
+                              class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                            >
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex min-h-[300px] flex-col items-center justify-center px-[25px] py-[35px] text-center min-[992px]:min-h-[360px]"
+                    >
+                      <p
+                        class="max-w-[350px] font-[fontstyle-demo-italic] text-[40px] leading-[1.35] text-[var(--h2-rock800)] min-[576px]:text-[25px] min-[992px]:text-[28px]"
+                      >
+                        “An ode to heirloom textures, graceful femininity, and
+                        modern sophistication.”
+                      </p>
+
+                      <div
+                        class="heading-ornament !mt-[35px] !w-[180px] min-[576px]:!w-[220px] min-[992px]:!w-[291px]"
+                      >
+                        <img
+                          src="images/common pattern.png"
+                          alt="pattern"
+                          class="block w-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col justify-end">
+                    <div
+                      class="cherished-card overflow-hidden bg-[var(--nav-rock50)]"
+                    >
+                      <div class="aspect-[445/447] w-full bg-[var(--rock200)]">
+                        <img
+                          src="images/most-cherished 3-slider 3.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+
+                      <div
+                        class="p-[22px] min-[576px]:p-[26px] min-[992px]:p-[28px]"
+                      >
+                        <p
+                          class="mb-[8px] font-[avenir-heavy] text-[18px] uppercase tracking-[1.5px] text-[var(--van-cleef950)]"
+                        >
+                          Royal Archive
+                        </p>
+
+                        <h3
+                          class="!mb-[10px] !text-[28px] text-[var(--sapia-black950)] min-[576px]:!text-[30px] min-[992px]:!text-[34px]"
+                        >
+                          Rajwada Silk Drape
+                        </h3>
+
+                        <p
+                          class="mb-[24px] font-[avenir-body] text-[18px] leading-[1.6] text-[var(--sapia-black950)] opacity-[60%] min-[576px]:text-[15px]"
+                        >
+                          Regal borders inspired by royal textile archives.
+                        </p>
+                        <div
+                          class="product-bottom !mr-[10px] !gap-[10px] min-[769px]:!gap-[16px] min-[992px]:!mr-[20px] min-[992px]:!gap-[24px]"
+                        >
+                          <p
+                            class="font-[avenir-roman] text-[18px] text-[var(--rock400-price)]"
+                          >
+                            ₹ 28,600
+                          </p>
+
+                          <a
+                            href="#"
+                            class="collection-button inline-flex items-center !mt-0 !gap-[8px] !px-[14px] !py-[10px] !text-[10px] min-[576px]:!px-[16px] min-[576px]:!py-[11px] min-[576px]:!text-[12px] min-[992px]:!px-[18px] min-[992px]:!py-[12px] min-[992px]:!text-[13px] min-[1301px]:!gap-[16px] min-[1301px]:!px-[22px] min-[1301px]:!py-[15px] min-[1301px]:!text-[16px]"
+                          >
+                            <span>Shop Now</span>
+                            <span
+                              class="arrow-wrap !h-[10px] !w-[10px] min-[769px]:!h-[12px] min-[769px]:!w-[12px] min-[1301px]:!h-[16px] min-[1301px]:!w-[16px]"
+                            >
+                              <i class="fa-solid fa-arrow-right"></i>
+                              <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 5th section -->
+      <section
+        class="couture-section w-full min-h-screen flex items-center justify-center relative"
+      >
+        <div class="couture-bg absolute top-0 left-0 w-full h-full -z-10">
+          <img
+            src="images/Brand Philosophy-bg.png"
+            alt="Brand Philosophy"
+            class="bg-image w-full h-full object-cover opacity-40"
+          />
+        </div>
+
+        <div
+          class="couture-container w-full max-w-5xl flex flex-col items-center relative z-10"
+        >
+          <div
+            class="couture-header w-full max-w-2xl flex flex-col items-center text-center"
+          >
+            <h2 class="couture-title w-[783px] h-[308px]">
+              Crafted For Celebrations That Deserve Timeless Elegance. Couture
+              Designed Around You.
+            </h2>
+          </div>
+
+          <div
+            class="couture-image-box w-full max-w-2xl mb-8 flex justify-center"
+          >
+            <img
+              src="images/sabyasachi im.webp"
+              alt="Couture fashion"
+              class="couture-img w-full h-auto object-cover"
+            />
+          </div>
+
+          <div class="couture-footer w-full max-w-md text-center">
+            <p class="couture-text">
+              Beautifully handcrafted silhouettes designed to celebrate
+              individuality through luxurious textures and timeless elegance.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- 6th section -->
+      <section
+        class="stories-section w-full !py-8 px-4 min-[576px]:!py-10 sm:px-8 md:px-12 lg:!py-16 lg:px-20"
+      >
+        <div
+          class="stories-header mb-7 flex flex-col items-center gap-4 text-center min-[576px]:mb-9 md:mb-16 md:flex-row md:items-start md:justify-between md:gap-6 md:text-left"
+        >
+          <div class="stories-title-wrap">
+            <h2
+              class="stories-title font-begum !text-[28px] min-[376px]:!text-[30px] min-[576px]:!text-[36px] min-[992px]:!text-[46px] min-[1301px]:!text-[56px]"
+            >
+              <span class="stories-decorative">Stories</span>
+              <span class="stories-main">OF CELEBRATION</span>
+            </h2>
+            <div
+              class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+            >
+              <img
+                src="images/common pattern.png"
+                alt="pattern"
+                class="block w-full"
+              />
+            </div>
+          </div>
+          <p
+            class="stories-subtitle mt-4 md:mt-0 md:max-w-xs text-center md:text-left"
+          >
+            Heartfelt words from our clients and their beautiful journeys with
+            Sanskriti.
+          </p>
+        </div>
+
+        <div
+          class="stories-grid grid min-w-0 grid-cols-1 gap-3 min-[576px]:gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-6"
+        >
+          <div
+            class="stories-card stories-card-image stories-card-tall relative overflow-hidden"
+          >
+            <img
+              src="images/review 1.png"
+              alt="Aditi Iyer"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="stories-quote-overlay absolute bottom-6 left-0 right-0 p-5 sm:p-6"
+            >
+              <div class="stories-quote-icon mb-4">
+                <svg
+                  width="96"
+                  height="55"
+                  viewBox="0 0 96 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28.5868 51.5876C28.5085 51.5887 28.4303 51.5897 28.3497 51.5908C24.4388 51.6328 20.8621 50.8295 17.6171 48.5542C17.5076 48.4789 17.3981 48.4036 17.2852 48.3259C15.5344 47.0542 14.0313 45.4487 12.8906 43.6128C12.8466 43.543 12.8027 43.4732 12.7575 43.4012C10.9838 40.5418 10.2415 37.3348 10.2655 33.9986C10.2658 33.9001 10.2662 33.8016 10.2666 33.7001C10.2752 32.0628 10.3876 30.4991 10.7421 28.896C10.7681 28.7752 10.794 28.6544 10.8207 28.5299C11.9189 23.5155 14.2457 18.9791 17.7044 15.1901C17.9322 14.9391 18.1539 14.6837 18.3758 14.4276C18.7039 14.0581 19.0478 13.7305 19.4253 13.4122C19.6896 13.1854 19.9413 12.9472 20.1953 12.7089C25.8076 7.60041 35.6269 3.26856 43.2826 3.40346C43.8721 3.46331 44.1213 3.72311 44.5129 4.13527C44.7708 4.69084 44.767 5.19806 44.6875 5.80031C44.3033 6.68056 43.3318 7.02944 42.492 7.37807C37.7957 9.40428 34.3322 13.1293 32.0117 17.6167C32.1327 17.662 32.2537 17.7073 32.3784 17.7539C32.4967 17.7984 32.4967 17.7984 32.6173 17.8437C32.7822 17.9056 32.9472 17.9673 33.1122 18.0288C35.3691 18.8758 37.3039 19.95 39.0826 21.5926C39.2702 21.764 39.4595 21.9243 39.6588 22.0814C40.0539 22.4239 40.3814 22.799 40.7128 23.2027C40.795 23.3022 40.8771 23.4018 40.9617 23.5044C42.6251 25.5676 43.7142 27.9479 44.3652 30.5073C44.3941 30.6166 44.3941 30.6166 44.4236 30.7281C44.999 33.0046 44.9669 35.9754 44.3652 38.2417C44.3323 38.3693 44.3323 38.3693 44.2988 38.4995C43.556 41.3181 42.2645 43.8103 40.2819 45.9572C40.1105 46.1447 39.9502 46.3341 39.793 46.5333C37.1647 49.566 32.5549 51.5431 28.5868 51.5876ZM37.0653 44.1936C38.9291 42.3734 40.1161 40.2016 40.8203 37.7046C40.857 37.5756 40.8937 37.4465 40.9315 37.3135C41.7187 33.93 41.0333 30.2052 39.2475 27.252C37.3179 24.1827 34.3469 21.9577 30.83 21.0542C30.3602 20.9569 29.8884 20.8688 29.4133 20.8011C28.7719 20.6953 28.3645 20.4684 27.9296 19.98C27.643 19.4425 27.7113 18.9483 27.8222 18.3687C27.9369 18.0082 28.0839 17.6663 28.2385 17.3213C28.2811 17.2244 28.3238 17.1274 28.3677 17.0275C29.1181 15.3503 29.9655 13.7352 31.0449 12.2456C31.0885 12.1853 31.132 12.125 31.1769 12.0629C31.7171 11.3233 32.2969 10.632 32.9258 9.96619C33.1995 9.67955 33.1995 9.67955 33.4082 9.34523C32.6051 9.56386 31.8519 9.85346 31.0919 10.1912C30.9759 10.2427 30.8599 10.2943 30.7403 10.3474C28.0736 11.5485 25.5798 12.9708 23.3105 14.8237C23.2233 14.8946 23.2233 14.8946 23.1344 14.9668C21.6639 16.1689 20.2698 17.497 19.121 19.0132C19.077 19.0699 19.033 19.1267 18.9876 19.1851C16.0718 22.9486 13.8822 27.8717 13.8318 32.6977C13.8302 32.8232 13.8302 32.8232 13.8286 32.9511C13.7876 35.5201 13.7876 35.5201 14.2871 38.0269C14.3136 38.1121 14.3401 38.1973 14.3674 38.285C15.0856 40.5241 16.2176 42.329 17.832 44.0425C17.9304 44.1513 17.9304 44.1513 18.0309 44.2624C20.3871 46.769 23.9277 47.9886 27.2985 48.1204C30.9823 48.1698 34.414 46.7119 37.0653 44.1936Z"
+                    fill="#FDF3F3"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M40.8203 37.7046C40.1161 40.2016 38.9291 42.3734 37.0653 44.1936C34.414 46.7119 30.9823 48.1698 27.2985 48.1204C23.9277 47.9886 20.3871 46.769 18.0309 44.2624L17.832 44.0425C16.2176 42.329 15.0856 40.5241 14.3674 38.285L14.2871 38.0269C13.7876 35.5201 13.7876 35.5201 13.8286 32.9511L13.8318 32.6977C13.8822 27.8717 16.0718 22.9486 18.9876 19.1851L19.121 19.0132C20.2698 17.497 21.6639 16.1689 23.1344 14.9668L23.3105 14.8237C25.5798 12.9708 28.0736 11.5485 30.7403 10.3474L31.0919 10.1912C31.8519 9.85346 32.6051 9.56386 33.4082 9.34523C33.1995 9.67955 33.1995 9.67955 32.9258 9.96619C32.2969 10.632 31.7171 11.3233 31.1769 12.0629L31.0449 12.2456C29.9655 13.7352 29.1181 15.3503 28.3677 17.0275L28.2385 17.3213C28.0839 17.6663 27.9369 18.0082 27.8222 18.3687C27.7113 18.9483 27.643 19.4425 27.9296 19.98C28.3645 20.4684 28.7719 20.6953 29.4133 20.8011C29.8884 20.8688 30.3602 20.9569 30.83 21.0542C34.3469 21.9577 37.3179 24.1827 39.2475 27.252C41.0333 30.2052 41.7187 33.93 40.9315 37.3135L40.8203 37.7046Z"
+                    fill="#FDF3F3"
+                  />
+                  <path
+                    d="M69.5868 51.5876C69.5085 51.5887 69.4303 51.5897 69.3497 51.5908C65.4388 51.6328 61.8621 50.8295 58.6171 48.5542C58.5076 48.4789 58.3981 48.4036 58.2852 48.3259C56.5344 47.0542 55.0313 45.4487 53.8906 43.6128C53.8466 43.543 53.8027 43.4732 53.7575 43.4012C51.9838 40.5418 51.2415 37.3348 51.2655 33.9986C51.2658 33.9001 51.2662 33.8016 51.2666 33.7001C51.2752 32.0628 51.3876 30.4991 51.7421 28.896C51.7681 28.7752 51.794 28.6544 51.8207 28.5299C52.9189 23.5155 55.2457 18.9791 58.7044 15.1901C58.9322 14.9391 59.1539 14.6837 59.3758 14.4276C59.7039 14.0581 60.0478 13.7305 60.4253 13.4122C60.6896 13.1854 60.9413 12.9472 61.1953 12.7089C66.8076 7.60041 76.6269 3.26856 84.2826 3.40346C84.8721 3.46331 85.1213 3.72311 85.5129 4.13527C85.7708 4.69084 85.767 5.19806 85.6875 5.80031C85.3033 6.68056 84.3318 7.02944 83.492 7.37807C78.7957 9.40428 75.3322 13.1293 73.0117 17.6167C73.1327 17.662 73.2537 17.7073 73.3784 17.7539C73.4967 17.7984 73.4967 17.7984 73.6173 17.8437C73.7822 17.9056 73.9472 17.9673 74.1122 18.0288C76.3691 18.8758 78.3039 19.95 80.0826 21.5926C80.2702 21.764 80.4595 21.9243 80.6588 22.0814C81.0539 22.4239 81.3814 22.799 81.7128 23.2027C81.795 23.3022 81.8771 23.4018 81.9617 23.5044C83.6251 25.5676 84.7142 27.9479 85.3652 30.5073C85.3941 30.6166 85.3941 30.6166 85.4236 30.7281C85.999 33.0046 85.9669 35.9754 85.3652 38.2417C85.3323 38.3693 85.3323 38.3693 85.2988 38.4995C84.556 41.3181 83.2645 43.8103 81.2819 45.9572C81.1105 46.1447 80.9502 46.3341 80.793 46.5333C78.1647 49.566 73.5549 51.5431 69.5868 51.5876ZM78.0653 44.1936C79.9291 42.3734 81.1161 40.2016 81.8203 37.7046C81.857 37.5756 81.8937 37.4465 81.9315 37.3135C82.7187 33.93 82.0333 30.2052 80.2475 27.252C78.3179 24.1827 75.3469 21.9577 71.83 21.0542C71.3602 20.9569 70.8884 20.8688 70.4133 20.8011C69.7719 20.6953 69.3645 20.4684 68.9296 19.98C68.643 19.4425 68.7113 18.9483 68.8222 18.3687C68.9369 18.0082 69.0839 17.6663 69.2385 17.3213C69.2811 17.2244 69.3238 17.1274 69.3677 17.0275C70.1181 15.3503 70.9655 13.7352 72.0449 12.2456C72.0885 12.1853 72.132 12.125 72.1769 12.0629C72.7171 11.3233 73.2969 10.632 73.9258 9.96619C74.1995 9.67955 74.1995 9.67955 74.4082 9.34523C73.6051 9.56386 72.8519 9.85346 72.0919 10.1912C71.9759 10.2427 71.8599 10.2943 71.7403 10.3474C69.0736 11.5485 66.5798 12.9708 64.3105 14.8237C64.2233 14.8946 64.2233 14.8946 64.1344 14.9668C62.6639 16.1689 61.2698 17.497 60.121 19.0132C60.077 19.0699 60.033 19.1267 59.9876 19.1851C57.0718 22.9486 54.8822 27.8717 54.8318 32.6977C54.8302 32.8232 54.8302 32.8232 54.8286 32.9511C54.7876 35.5201 54.7876 35.5201 55.2871 38.0269C55.3136 38.1121 55.3401 38.1973 55.3674 38.285C56.0856 40.5241 57.2176 42.329 58.832 44.0425C58.9304 44.1513 58.9304 44.1513 59.0309 44.2624C61.3871 46.769 64.9277 47.9886 68.2985 48.1204C71.9823 48.1698 75.414 46.7119 78.0653 44.1936Z"
+                    fill="#FDF3F3"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M81.8203 37.7046C81.1161 40.2016 79.9291 42.3734 78.0653 44.1936C75.414 46.7119 71.9823 48.1698 68.2985 48.1204C64.9277 47.9886 61.3871 46.769 59.0309 44.2624L58.832 44.0425C57.2176 42.329 56.0856 40.5241 55.3674 38.285L55.2871 38.0269C54.7876 35.5201 54.7876 35.5201 54.8286 32.9511L54.8318 32.6977C54.8822 27.8717 57.0718 22.9486 59.9876 19.1851L60.121 19.0132C61.2698 17.497 62.6639 16.1689 64.1344 14.9668L64.3105 14.8237C66.5798 12.9708 69.0736 11.5485 71.7403 10.3474L72.0919 10.1912C72.8519 9.85346 73.6051 9.56386 74.4082 9.34523C74.1995 9.67955 74.1995 9.67955 73.9258 9.96619C73.2969 10.632 72.7171 11.3233 72.1769 12.0629L72.0449 12.2456C70.9655 13.7352 70.1181 15.3503 69.3677 17.0275L69.2385 17.3213C69.0839 17.6663 68.9369 18.0082 68.8222 18.3687C68.7113 18.9483 68.643 19.4425 68.9296 19.98C69.3645 20.4684 69.7719 20.6953 70.4133 20.8011C70.8884 20.8688 71.3602 20.9569 71.83 21.0542C75.3469 21.9577 78.3179 24.1827 80.2475 27.252C82.0333 30.2052 82.7187 33.93 81.9315 37.3135L81.8203 37.7046Z"
+                    fill="#FDF3F3"
+                  />
+                </svg>
+              </div>
+              <p class="stories-quote-text">
+                “Every detail felt deeply personal and timeless. Sanskriti made
+                my wedding celebrations unforgettable through craftsmanship that
+                felt...”
+              </p>
+              <div class="stories-author mt-5">
+                <p class="stories-author-name mt-4">Aditi Iyer</p>
+                <p class="stories-author-category mt-2">BRIDAL COUTURE</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="stories-text-cards  flex-col gap-4 md:gap-4">
+            <div class="stories-card stories-card-text p-5 sm:p-6">
+              <div class="stories-quote-icon mb-3">
+                <svg
+                  width="96"
+                  height="55"
+                  viewBox="0 0 96 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28.5868 51.5876C28.5086 51.5887 28.4304 51.5897 28.3498 51.5908C24.4388 51.6328 20.8622 50.8295 17.6172 48.5542C17.5077 48.4789 17.3981 48.4036 17.2853 48.3259C15.5345 47.0542 14.0313 45.4487 12.8906 43.6128C12.8467 43.543 12.8028 43.4732 12.7575 43.4012C10.9839 40.5418 10.2415 37.3348 10.2655 33.9986C10.2659 33.9001 10.2662 33.8016 10.2666 33.7001C10.2753 32.0628 10.3877 30.4991 10.7422 28.896C10.7681 28.7752 10.7941 28.6544 10.8208 28.5299C11.919 23.5155 14.2457 18.9791 17.7045 15.1901C17.9322 14.9391 18.154 14.6837 18.3759 14.4276C18.704 14.0581 19.0478 13.7305 19.4253 13.4122C19.6897 13.1854 19.9414 12.9472 20.1953 12.7089C25.8077 7.60041 35.627 3.26856 43.2826 3.40346C43.8722 3.46331 44.1214 3.72311 44.513 4.13527C44.7709 4.69084 44.767 5.19806 44.6875 5.80031C44.3034 6.68056 43.3318 7.02944 42.4921 7.37807C37.7958 9.40428 34.3323 13.1293 32.0117 17.6167C32.1328 17.662 32.2538 17.7073 32.3785 17.7539C32.4967 17.7984 32.4967 17.7984 32.6173 17.8437C32.7822 17.9056 32.9472 17.9673 33.1123 18.0288C35.3691 18.8758 37.304 19.95 39.0827 21.5926C39.2702 21.764 39.4596 21.9243 39.6588 22.0814C40.054 22.4239 40.3815 22.799 40.7129 23.2027C40.795 23.3022 40.8771 23.4018 40.9617 23.5044C42.6252 25.5676 43.7143 27.9479 44.3652 30.5073C44.3941 30.6166 44.3941 30.6166 44.4236 30.7281C44.9991 33.0046 44.967 35.9754 44.3652 38.2417C44.3324 38.3693 44.3324 38.3693 44.2988 38.4995C43.5561 41.3181 42.2645 43.8103 40.282 45.9572C40.1106 46.1447 39.9503 46.3341 39.7931 46.5333C37.1648 49.566 32.555 51.5431 28.5868 51.5876ZM37.0654 44.1936C38.9291 42.3734 40.1161 40.2016 40.8203 37.7046C40.857 37.5756 40.8937 37.4465 40.9315 37.3135C41.7188 33.93 41.0334 30.2052 39.2476 27.252C37.318 24.1827 34.3469 21.9577 30.8301 21.0542C30.3602 20.9569 29.8884 20.8688 29.4134 20.8011C28.7719 20.6953 28.3645 20.4684 27.9297 19.98C27.6431 19.4425 27.7113 18.9483 27.8223 18.3687C27.937 18.0082 28.0839 17.6663 28.2385 17.3213C28.2812 17.2244 28.3239 17.1274 28.3678 17.0275C29.1181 15.3503 29.9656 13.7352 31.0449 12.2456C31.0885 12.1853 31.1321 12.125 31.177 12.0629C31.7172 11.3233 32.2969 10.632 32.9258 9.96619C33.1996 9.67955 33.1996 9.67955 33.4082 9.34523C32.6052 9.56386 31.852 9.85346 31.0919 10.1912C30.9759 10.2427 30.8599 10.2943 30.7404 10.3474C28.0737 11.5485 25.5799 12.9708 23.3106 14.8237C23.2234 14.8946 23.2234 14.8946 23.1344 14.9668C21.664 16.1689 20.2699 17.497 19.1211 19.0132C19.0771 19.0699 19.033 19.1267 18.9877 19.1851C16.0718 22.9486 13.8822 27.8717 13.8318 32.6977C13.8303 32.8232 13.8303 32.8232 13.8286 32.9511C13.7877 35.5201 13.7877 35.5201 14.2871 38.0269C14.3136 38.1121 14.3401 38.1973 14.3674 38.285C15.0857 40.5241 16.2177 42.329 17.832 44.0425C17.9305 44.1513 17.9305 44.1513 18.0309 44.2624C20.3872 46.769 23.9278 47.9886 27.2985 48.1204C30.9824 48.1698 34.4141 46.7119 37.0654 44.1936Z"
+                    fill="#4B1912"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M40.8203 37.7046C40.1161 40.2016 38.9291 42.3734 37.0654 44.1936C34.4141 46.7119 30.9824 48.1698 27.2985 48.1204C23.9278 47.9886 20.3872 46.769 18.0309 44.2624L17.832 44.0425C16.2177 42.329 15.0857 40.5241 14.3674 38.285L14.2871 38.0269C13.7877 35.5201 13.7877 35.5201 13.8286 32.9511L13.8318 32.6977C13.8822 27.8717 16.0718 22.9486 18.9877 19.1851L19.1211 19.0132C20.2699 17.497 21.664 16.1689 23.1344 14.9668L23.3106 14.8237C25.5799 12.9708 28.0737 11.5485 30.7404 10.3474L31.0919 10.1912C31.852 9.85346 32.6052 9.56386 33.4082 9.34523C33.1996 9.67955 33.1996 9.67955 32.9258 9.96619C32.2969 10.632 31.7172 11.3233 31.177 12.0629L31.0449 12.2456C29.9656 13.7352 29.1181 15.3503 28.3678 17.0275L28.2385 17.3213C28.0839 17.6663 27.937 18.0082 27.8223 18.3687C27.7113 18.9483 27.6431 19.4425 27.9297 19.98C28.3645 20.4684 28.7719 20.6953 29.4134 20.8011C29.8884 20.8688 30.3602 20.9569 30.8301 21.0542C34.3469 21.9577 37.318 24.1827 39.2476 27.252C41.0334 30.2052 41.7188 33.93 40.9315 37.3135L40.8203 37.7046Z"
+                    fill="#4B1912"
+                  />
+                  <path
+                    d="M69.5868 51.5876C69.5086 51.5887 69.4304 51.5897 69.3498 51.5908C65.4388 51.6328 61.8622 50.8295 58.6172 48.5542C58.5077 48.4789 58.3981 48.4036 58.2853 48.3259C56.5345 47.0542 55.0313 45.4487 53.8906 43.6128C53.8467 43.543 53.8028 43.4732 53.7575 43.4012C51.9839 40.5418 51.2415 37.3348 51.2655 33.9986C51.2659 33.9001 51.2662 33.8016 51.2666 33.7001C51.2753 32.0628 51.3877 30.4991 51.7422 28.896C51.7681 28.7752 51.7941 28.6544 51.8208 28.5299C52.919 23.5155 55.2457 18.9791 58.7045 15.1901C58.9322 14.9391 59.154 14.6837 59.3759 14.4276C59.704 14.0581 60.0478 13.7305 60.4253 13.4122C60.6897 13.1854 60.9414 12.9472 61.1953 12.7089C66.8077 7.60041 76.627 3.26856 84.2826 3.40346C84.8722 3.46331 85.1214 3.72311 85.513 4.13527C85.7709 4.69084 85.767 5.19806 85.6875 5.80031C85.3034 6.68056 84.3318 7.02944 83.4921 7.37807C78.7958 9.40428 75.3323 13.1293 73.0117 17.6167C73.1328 17.662 73.2538 17.7073 73.3785 17.7539C73.4967 17.7984 73.4967 17.7984 73.6173 17.8437C73.7822 17.9056 73.9472 17.9673 74.1123 18.0288C76.3691 18.8758 78.304 19.95 80.0827 21.5926C80.2702 21.764 80.4596 21.9243 80.6588 22.0814C81.054 22.4239 81.3815 22.799 81.7129 23.2027C81.795 23.3022 81.8771 23.4018 81.9617 23.5044C83.6252 25.5676 84.7143 27.9479 85.3652 30.5073C85.3941 30.6166 85.3941 30.6166 85.4236 30.7281C85.9991 33.0046 85.967 35.9754 85.3652 38.2417C85.3324 38.3693 85.3324 38.3693 85.2988 38.4995C84.5561 41.3181 83.2645 43.8103 81.282 45.9572C81.1106 46.1447 80.9503 46.3341 80.7931 46.5333C78.1648 49.566 73.555 51.5431 69.5868 51.5876ZM78.0654 44.1936C79.9291 42.3734 81.1161 40.2016 81.8203 37.7046C81.857 37.5756 81.8937 37.4465 81.9315 37.3135C82.7188 33.93 82.0334 30.2052 80.2476 27.252C78.318 24.1827 75.3469 21.9577 71.8301 21.0542C71.3602 20.9569 70.8884 20.8688 70.4134 20.8011C69.7719 20.6953 69.3645 20.4684 68.9297 19.98C68.6431 19.4425 68.7113 18.9483 68.8223 18.3687C68.937 18.0082 69.0839 17.6663 69.2385 17.3213C69.2812 17.2244 69.3239 17.1274 69.3678 17.0275C70.1181 15.3503 70.9656 13.7352 72.0449 12.2456C72.0885 12.1853 72.1321 12.125 72.177 12.0629C72.7172 11.3233 73.2969 10.632 73.9258 9.96619C74.1996 9.67955 74.1996 9.67955 74.4082 9.34523C73.6052 9.56386 72.852 9.85346 72.0919 10.1912C71.9759 10.2427 71.8599 10.2943 71.7404 10.3474C69.0737 11.5485 66.5799 12.9708 64.3106 14.8237C64.2234 14.8946 64.2234 14.8946 64.1344 14.9668C62.664 16.1689 61.2699 17.497 60.1211 19.0132C60.0771 19.0699 60.033 19.1267 59.9877 19.1851C57.0718 22.9486 54.8822 27.8717 54.8318 32.6977C54.8303 32.8232 54.8303 32.8232 54.8286 32.9511C54.7877 35.5201 54.7877 35.5201 55.2871 38.0269C55.3136 38.1121 55.3401 38.1973 55.3674 38.285C56.0857 40.5241 57.2177 42.329 58.832 44.0425C58.9305 44.1513 58.9305 44.1513 59.0309 44.2624C61.3872 46.769 64.9278 47.9886 68.2985 48.1204C71.9824 48.1698 75.4141 46.7119 78.0654 44.1936Z"
+                    fill="#4B1912"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M81.8203 37.7046C81.1161 40.2016 79.9291 42.3734 78.0654 44.1936C75.4141 46.7119 71.9824 48.1698 68.2985 48.1204C64.9278 47.9886 61.3872 46.769 59.0309 44.2624L58.832 44.0425C57.2177 42.329 56.0857 40.5241 55.3674 38.285L55.2871 38.0269C54.7877 35.5201 54.7877 35.5201 54.8286 32.9511L54.8318 32.6977C54.8822 27.8717 57.0718 22.9486 59.9877 19.1851L60.1211 19.0132C61.2699 17.497 62.664 16.1689 64.1344 14.9668L64.3106 14.8237C66.5799 12.9708 69.0737 11.5485 71.7404 10.3474L72.0919 10.1912C72.852 9.85346 73.6052 9.56386 74.4082 9.34523C74.1996 9.67955 74.1996 9.67955 73.9258 9.96619C73.2969 10.632 72.7172 11.3233 72.177 12.0629L72.0449 12.2456C70.9656 13.7352 70.1181 15.3503 69.3678 17.0275L69.2385 17.3213C69.0839 17.6663 68.937 18.0082 68.8223 18.3687C68.7113 18.9483 68.6431 19.4425 68.9297 19.98C69.3645 20.4684 69.7719 20.6953 70.4134 20.8011C70.8884 20.8688 71.3602 20.9569 71.8301 21.0542C75.3469 21.9577 78.318 24.1827 80.2476 27.252C82.0334 30.2052 82.7188 33.93 81.9315 37.3135L81.8203 37.7046Z"
+                    fill="#4B1912"
+                  />
+                </svg>
+              </div>
+              <p class="stories-quote-text-dark">
+                “The craftsmanship, luxurious textures, and thoughtful styling
+                created an experience that felt truly special from beginning to
+                end.”
+              </p>
+              <div class="stories-author mt-4">
+                <p class="stories-author-name-dark">Meher Kapoor</p>
+                <p class="stories-author-category-dark">FESTIVE EDIT</p>
+              </div>
+            </div>
+            <div class="stories-card stories-card-text p-5 sm:p-6">
+              <div class="stories-quote-icon mb-3">
+                <svg
+                  width="96"
+                  height="55"
+                  viewBox="0 0 96 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28.5868 51.5876C28.5086 51.5887 28.4304 51.5897 28.3498 51.5908C24.4388 51.6328 20.8622 50.8295 17.6172 48.5542C17.5077 48.4789 17.3981 48.4036 17.2853 48.3259C15.5345 47.0542 14.0313 45.4487 12.8906 43.6128C12.8467 43.543 12.8028 43.4732 12.7575 43.4012C10.9839 40.5418 10.2415 37.3348 10.2655 33.9986C10.2659 33.9001 10.2662 33.8016 10.2666 33.7001C10.2753 32.0628 10.3877 30.4991 10.7422 28.896C10.7681 28.7752 10.7941 28.6544 10.8208 28.5299C11.919 23.5155 14.2457 18.9791 17.7045 15.1901C17.9322 14.9391 18.154 14.6837 18.3759 14.4276C18.704 14.0581 19.0478 13.7305 19.4253 13.4122C19.6897 13.1854 19.9414 12.9472 20.1953 12.7089C25.8077 7.60041 35.627 3.26856 43.2826 3.40346C43.8722 3.46331 44.1214 3.72311 44.513 4.13527C44.7709 4.69084 44.767 5.19806 44.6875 5.80031C44.3034 6.68056 43.3318 7.02944 42.4921 7.37807C37.7958 9.40428 34.3323 13.1293 32.0117 17.6167C32.1328 17.662 32.2538 17.7073 32.3785 17.7539C32.4967 17.7984 32.4967 17.7984 32.6173 17.8437C32.7822 17.9056 32.9472 17.9673 33.1123 18.0288C35.3691 18.8758 37.304 19.95 39.0827 21.5926C39.2702 21.764 39.4596 21.9243 39.6588 22.0814C40.054 22.4239 40.3815 22.799 40.7129 23.2027C40.795 23.3022 40.8771 23.4018 40.9617 23.5044C42.6252 25.5676 43.7143 27.9479 44.3652 30.5073C44.3941 30.6166 44.3941 30.6166 44.4236 30.7281C44.9991 33.0046 44.967 35.9754 44.3652 38.2417C44.3324 38.3693 44.3324 38.3693 44.2988 38.4995C43.5561 41.3181 42.2645 43.8103 40.282 45.9572C40.1106 46.1447 39.9503 46.3341 39.7931 46.5333C37.1648 49.566 32.555 51.5431 28.5868 51.5876ZM37.0654 44.1936C38.9291 42.3734 40.1161 40.2016 40.8203 37.7046C40.857 37.5756 40.8937 37.4465 40.9315 37.3135C41.7188 33.93 41.0334 30.2052 39.2476 27.252C37.318 24.1827 34.3469 21.9577 30.8301 21.0542C30.3602 20.9569 29.8884 20.8688 29.4134 20.8011C28.7719 20.6953 28.3645 20.4684 27.9297 19.98C27.6431 19.4425 27.7113 18.9483 27.8223 18.3687C27.937 18.0082 28.0839 17.6663 28.2385 17.3213C28.2812 17.2244 28.3239 17.1274 28.3678 17.0275C29.1181 15.3503 29.9656 13.7352 31.0449 12.2456C31.0885 12.1853 31.1321 12.125 31.177 12.0629C31.7172 11.3233 32.2969 10.632 32.9258 9.96619C33.1996 9.67955 33.1996 9.67955 33.4082 9.34523C32.6052 9.56386 31.852 9.85346 31.0919 10.1912C30.9759 10.2427 30.8599 10.2943 30.7404 10.3474C28.0737 11.5485 25.5799 12.9708 23.3106 14.8237C23.2234 14.8946 23.2234 14.8946 23.1344 14.9668C21.664 16.1689 20.2699 17.497 19.1211 19.0132C19.0771 19.0699 19.033 19.1267 18.9877 19.1851C16.0718 22.9486 13.8822 27.8717 13.8318 32.6977C13.8303 32.8232 13.8303 32.8232 13.8286 32.9511C13.7877 35.5201 13.7877 35.5201 14.2871 38.0269C14.3136 38.1121 14.3401 38.1973 14.3674 38.285C15.0857 40.5241 16.2177 42.329 17.832 44.0425C17.9305 44.1513 17.9305 44.1513 18.0309 44.2624C20.3872 46.769 23.9278 47.9886 27.2985 48.1204C30.9824 48.1698 34.4141 46.7119 37.0654 44.1936Z"
+                    fill="#4B1912"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M40.8203 37.7046C40.1161 40.2016 38.9291 42.3734 37.0654 44.1936C34.4141 46.7119 30.9824 48.1698 27.2985 48.1204C23.9278 47.9886 20.3872 46.769 18.0309 44.2624L17.832 44.0425C16.2177 42.329 15.0857 40.5241 14.3674 38.285L14.2871 38.0269C13.7877 35.5201 13.7877 35.5201 13.8286 32.9511L13.8318 32.6977C13.8822 27.8717 16.0718 22.9486 18.9877 19.1851L19.1211 19.0132C20.2699 17.497 21.664 16.1689 23.1344 14.9668L23.3106 14.8237C25.5799 12.9708 28.0737 11.5485 30.7404 10.3474L31.0919 10.1912C31.852 9.85346 32.6052 9.56386 33.4082 9.34523C33.1996 9.67955 33.1996 9.67955 32.9258 9.96619C32.2969 10.632 31.7172 11.3233 31.177 12.0629L31.0449 12.2456C29.9656 13.7352 29.1181 15.3503 28.3678 17.0275L28.2385 17.3213C28.0839 17.6663 27.937 18.0082 27.8223 18.3687C27.7113 18.9483 27.6431 19.4425 27.9297 19.98C28.3645 20.4684 28.7719 20.6953 29.4134 20.8011C29.8884 20.8688 30.3602 20.9569 30.8301 21.0542C34.3469 21.9577 37.318 24.1827 39.2476 27.252C41.0334 30.2052 41.7188 33.93 40.9315 37.3135L40.8203 37.7046Z"
+                    fill="#4B1912"
+                  />
+                  <path
+                    d="M69.5868 51.5876C69.5086 51.5887 69.4304 51.5897 69.3498 51.5908C65.4388 51.6328 61.8622 50.8295 58.6172 48.5542C58.5077 48.4789 58.3981 48.4036 58.2853 48.3259C56.5345 47.0542 55.0313 45.4487 53.8906 43.6128C53.8467 43.543 53.8028 43.4732 53.7575 43.4012C51.9839 40.5418 51.2415 37.3348 51.2655 33.9986C51.2659 33.9001 51.2662 33.8016 51.2666 33.7001C51.2753 32.0628 51.3877 30.4991 51.7422 28.896C51.7681 28.7752 51.7941 28.6544 51.8208 28.5299C52.919 23.5155 55.2457 18.9791 58.7045 15.1901C58.9322 14.9391 59.154 14.6837 59.3759 14.4276C59.704 14.0581 60.0478 13.7305 60.4253 13.4122C60.6897 13.1854 60.9414 12.9472 61.1953 12.7089C66.8077 7.60041 76.627 3.26856 84.2826 3.40346C84.8722 3.46331 85.1214 3.72311 85.513 4.13527C85.7709 4.69084 85.767 5.19806 85.6875 5.80031C85.3034 6.68056 84.3318 7.02944 83.4921 7.37807C78.7958 9.40428 75.3323 13.1293 73.0117 17.6167C73.1328 17.662 73.2538 17.7073 73.3785 17.7539C73.4967 17.7984 73.4967 17.7984 73.6173 17.8437C73.7822 17.9056 73.9472 17.9673 74.1123 18.0288C76.3691 18.8758 78.304 19.95 80.0827 21.5926C80.2702 21.764 80.4596 21.9243 80.6588 22.0814C81.054 22.4239 81.3815 22.799 81.7129 23.2027C81.795 23.3022 81.8771 23.4018 81.9617 23.5044C83.6252 25.5676 84.7143 27.9479 85.3652 30.5073C85.3941 30.6166 85.3941 30.6166 85.4236 30.7281C85.9991 33.0046 85.967 35.9754 85.3652 38.2417C85.3324 38.3693 85.3324 38.3693 85.2988 38.4995C84.5561 41.3181 83.2645 43.8103 81.282 45.9572C81.1106 46.1447 80.9503 46.3341 80.7931 46.5333C78.1648 49.566 73.555 51.5431 69.5868 51.5876ZM78.0654 44.1936C79.9291 42.3734 81.1161 40.2016 81.8203 37.7046C81.857 37.5756 81.8937 37.4465 81.9315 37.3135C82.7188 33.93 82.0334 30.2052 80.2476 27.252C78.318 24.1827 75.3469 21.9577 71.8301 21.0542C71.3602 20.9569 70.8884 20.8688 70.4134 20.8011C69.7719 20.6953 69.3645 20.4684 68.9297 19.98C68.6431 19.4425 68.7113 18.9483 68.8223 18.3687C68.937 18.0082 69.0839 17.6663 69.2385 17.3213C69.2812 17.2244 69.3239 17.1274 69.3678 17.0275C70.1181 15.3503 70.9656 13.7352 72.0449 12.2456C72.0885 12.1853 72.1321 12.125 72.177 12.0629C72.7172 11.3233 73.2969 10.632 73.9258 9.96619C74.1996 9.67955 74.1996 9.67955 74.4082 9.34523C73.6052 9.56386 72.852 9.85346 72.0919 10.1912C71.9759 10.2427 71.8599 10.2943 71.7404 10.3474C69.0737 11.5485 66.5799 12.9708 64.3106 14.8237C64.2234 14.8946 64.2234 14.8946 64.1344 14.9668C62.664 16.1689 61.2699 17.497 60.1211 19.0132C60.0771 19.0699 60.033 19.1267 59.9877 19.1851C57.0718 22.9486 54.8822 27.8717 54.8318 32.6977C54.8303 32.8232 54.8303 32.8232 54.8286 32.9511C54.7877 35.5201 54.7877 35.5201 55.2871 38.0269C55.3136 38.1121 55.3401 38.1973 55.3674 38.285C56.0857 40.5241 57.2177 42.329 58.832 44.0425C58.9305 44.1513 58.9305 44.1513 59.0309 44.2624C61.3872 46.769 64.9278 47.9886 68.2985 48.1204C71.9824 48.1698 75.4141 46.7119 78.0654 44.1936Z"
+                    fill="#4B1912"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M81.8203 37.7046C81.1161 40.2016 79.9291 42.3734 78.0654 44.1936C75.4141 46.7119 71.9824 48.1698 68.2985 48.1204C64.9278 47.9886 61.3872 46.769 59.0309 44.2624L58.832 44.0425C57.2177 42.329 56.0857 40.5241 55.3674 38.285L55.2871 38.0269C54.7877 35.5201 54.7877 35.5201 54.8286 32.9511L54.8318 32.6977C54.8822 27.8717 57.0718 22.9486 59.9877 19.1851L60.1211 19.0132C61.2699 17.497 62.664 16.1689 64.1344 14.9668L64.3106 14.8237C66.5799 12.9708 69.0737 11.5485 71.7404 10.3474L72.0919 10.1912C72.852 9.85346 73.6052 9.56386 74.4082 9.34523C74.1996 9.67955 74.1996 9.67955 73.9258 9.96619C73.2969 10.632 72.7172 11.3233 72.177 12.0629L72.0449 12.2456C70.9656 13.7352 70.1181 15.3503 69.3678 17.0275L69.2385 17.3213C69.0839 17.6663 68.937 18.0082 68.8223 18.3687C68.7113 18.9483 68.6431 19.4425 68.9297 19.98C69.3645 20.4684 69.7719 20.6953 70.4134 20.8011C70.8884 20.8688 71.3602 20.9569 71.8301 21.0542C75.3469 21.9577 78.318 24.1827 80.2476 27.252C82.0334 30.2052 82.7188 33.93 81.9315 37.3135L81.8203 37.7046Z"
+                    fill="#4B1912"
+                  />
+                </svg>
+              </div>
+              <p class="stories-quote-text-dark">
+                “Sanskriti beautifully balances heritage artistry with modern
+                sophistication in every silhouette. Every ensemble felt
+                graceful, refined, and timeless.”
+              </p>
+              <div class="stories-author mt-4">
+                <p class="stories-author-name-dark">Rhea Sharma</p>
+                <p class="stories-author-category-dark">OCCASION WEAR</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="stories-image-stack flex flex-col gap-4 md:gap-6">
+            <div
+              class="stories-card stories-card-image stories-card-short relative overflow-hidden"
+            >
+              <img
+                src="images/review 2.png"
+                alt="Festive edit model"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="stories-card stories-card-image stories-card-short relative overflow-hidden"
+            >
+              <img
+                src="images/review 3.png"
+                alt="Occasion wear model"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div
+            class="stories-card stories-card-image stories-card-tall relative overflow-hidden"
+          >
+            <img
+              src="images/aditi.png"
+              alt="Aditi Rao"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="stories-quote-overlay absolute bottom-0 left-0 right-0 p-5 sm:p-6"
+            >
+              <div class="stories-quote-icon mb-3">
+                <svg
+                  width="96"
+                  height="55"
+                  viewBox="0 0 96 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28.5868 51.5876C28.5085 51.5887 28.4303 51.5897 28.3497 51.5908C24.4388 51.6328 20.8621 50.8295 17.6171 48.5542C17.5076 48.4789 17.3981 48.4036 17.2852 48.3259C15.5344 47.0542 14.0313 45.4487 12.8906 43.6128C12.8466 43.543 12.8027 43.4732 12.7575 43.4012C10.9838 40.5418 10.2415 37.3348 10.2655 33.9986C10.2658 33.9001 10.2662 33.8016 10.2666 33.7001C10.2752 32.0628 10.3876 30.4991 10.7421 28.896C10.7681 28.7752 10.794 28.6544 10.8207 28.5299C11.9189 23.5155 14.2457 18.9791 17.7044 15.1901C17.9322 14.9391 18.1539 14.6837 18.3758 14.4276C18.7039 14.0581 19.0478 13.7305 19.4253 13.4122C19.6896 13.1854 19.9413 12.9472 20.1953 12.7089C25.8076 7.60041 35.6269 3.26856 43.2826 3.40346C43.8721 3.46331 44.1213 3.72311 44.5129 4.13527C44.7708 4.69084 44.767 5.19806 44.6875 5.80031C44.3033 6.68056 43.3318 7.02944 42.492 7.37807C37.7957 9.40428 34.3322 13.1293 32.0117 17.6167C32.1327 17.662 32.2537 17.7073 32.3784 17.7539C32.4967 17.7984 32.4967 17.7984 32.6173 17.8437C32.7822 17.9056 32.9472 17.9673 33.1122 18.0288C35.3691 18.8758 37.3039 19.95 39.0826 21.5926C39.2702 21.764 39.4595 21.9243 39.6588 22.0814C40.0539 22.4239 40.3814 22.799 40.7128 23.2027C40.795 23.3022 40.8771 23.4018 40.9617 23.5044C42.6251 25.5676 43.7142 27.9479 44.3652 30.5073C44.3941 30.6166 44.3941 30.6166 44.4236 30.7281C44.999 33.0046 44.9669 35.9754 44.3652 38.2417C44.3323 38.3693 44.3323 38.3693 44.2988 38.4995C43.556 41.3181 42.2645 43.8103 40.2819 45.9572C40.1105 46.1447 39.9502 46.3341 39.793 46.5333C37.1647 49.566 32.5549 51.5431 28.5868 51.5876ZM37.0653 44.1936C38.9291 42.3734 40.1161 40.2016 40.8203 37.7046C40.857 37.5756 40.8937 37.4465 40.9315 37.3135C41.7187 33.93 41.0333 30.2052 39.2475 27.252C37.3179 24.1827 34.3469 21.9577 30.83 21.0542C30.3602 20.9569 29.8884 20.8688 29.4133 20.8011C28.7719 20.6953 28.3645 20.4684 27.9296 19.98C27.643 19.4425 27.7113 18.9483 27.8222 18.3687C27.9369 18.0082 28.0839 17.6663 28.2385 17.3213C28.2811 17.2244 28.3238 17.1274 28.3677 17.0275C29.1181 15.3503 29.9655 13.7352 31.0449 12.2456C31.0885 12.1853 31.132 12.125 31.1769 12.0629C31.7171 11.3233 32.2969 10.632 32.9258 9.96619C33.1995 9.67955 33.1995 9.67955 33.4082 9.34523C32.6051 9.56386 31.8519 9.85346 31.0919 10.1912C30.9759 10.2427 30.8599 10.2943 30.7403 10.3474C28.0736 11.5485 25.5798 12.9708 23.3105 14.8237C23.2233 14.8946 23.2233 14.8946 23.1344 14.9668C21.6639 16.1689 20.2698 17.497 19.121 19.0132C19.077 19.0699 19.033 19.1267 18.9876 19.1851C16.0718 22.9486 13.8822 27.8717 13.8318 32.6977C13.8302 32.8232 13.8302 32.8232 13.8286 32.9511C13.7876 35.5201 13.7876 35.5201 14.2871 38.0269C14.3136 38.1121 14.3401 38.1973 14.3674 38.285C15.0856 40.5241 16.2176 42.329 17.832 44.0425C17.9304 44.1513 17.9304 44.1513 18.0309 44.2624C20.3871 46.769 23.9277 47.9886 27.2985 48.1204C30.9823 48.1698 34.414 46.7119 37.0653 44.1936Z"
+                    fill="#FDF3F3"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M40.8203 37.7046C40.1161 40.2016 38.9291 42.3734 37.0653 44.1936C34.414 46.7119 30.9823 48.1698 27.2985 48.1204C23.9277 47.9886 20.3871 46.769 18.0309 44.2624L17.832 44.0425C16.2176 42.329 15.0856 40.5241 14.3674 38.285L14.2871 38.0269C13.7876 35.5201 13.7876 35.5201 13.8286 32.9511L13.8318 32.6977C13.8822 27.8717 16.0718 22.9486 18.9876 19.1851L19.121 19.0132C20.2698 17.497 21.6639 16.1689 23.1344 14.9668L23.3105 14.8237C25.5798 12.9708 28.0736 11.5485 30.7403 10.3474L31.0919 10.1912C31.8519 9.85346 32.6051 9.56386 33.4082 9.34523C33.1995 9.67955 33.1995 9.67955 32.9258 9.96619C32.2969 10.632 31.7171 11.3233 31.1769 12.0629L31.0449 12.2456C29.9655 13.7352 29.1181 15.3503 28.3677 17.0275L28.2385 17.3213C28.0839 17.6663 27.9369 18.0082 27.8222 18.3687C27.7113 18.9483 27.643 19.4425 27.9296 19.98C28.3645 20.4684 28.7719 20.6953 29.4133 20.8011C29.8884 20.8688 30.3602 20.9569 30.83 21.0542C34.3469 21.9577 37.3179 24.1827 39.2475 27.252C41.0333 30.2052 41.7187 33.93 40.9315 37.3135L40.8203 37.7046Z"
+                    fill="#FDF3F3"
+                  />
+                  <path
+                    d="M69.5868 51.5876C69.5085 51.5887 69.4303 51.5897 69.3497 51.5908C65.4388 51.6328 61.8621 50.8295 58.6171 48.5542C58.5076 48.4789 58.3981 48.4036 58.2852 48.3259C56.5344 47.0542 55.0313 45.4487 53.8906 43.6128C53.8466 43.543 53.8027 43.4732 53.7575 43.4012C51.9838 40.5418 51.2415 37.3348 51.2655 33.9986C51.2658 33.9001 51.2662 33.8016 51.2666 33.7001C51.2752 32.0628 51.3876 30.4991 51.7421 28.896C51.7681 28.7752 51.794 28.6544 51.8207 28.5299C52.9189 23.5155 55.2457 18.9791 58.7044 15.1901C58.9322 14.9391 59.1539 14.6837 59.3758 14.4276C59.7039 14.0581 60.0478 13.7305 60.4253 13.4122C60.6896 13.1854 60.9413 12.9472 61.1953 12.7089C66.8076 7.60041 76.6269 3.26856 84.2826 3.40346C84.8721 3.46331 85.1213 3.72311 85.5129 4.13527C85.7708 4.69084 85.767 5.19806 85.6875 5.80031C85.3033 6.68056 84.3318 7.02944 83.492 7.37807C78.7957 9.40428 75.3322 13.1293 73.0117 17.6167C73.1327 17.662 73.2537 17.7073 73.3784 17.7539C73.4967 17.7984 73.4967 17.7984 73.6173 17.8437C73.7822 17.9056 73.9472 17.9673 74.1122 18.0288C76.3691 18.8758 78.3039 19.95 80.0826 21.5926C80.2702 21.764 80.4595 21.9243 80.6588 22.0814C81.0539 22.4239 81.3814 22.799 81.7128 23.2027C81.795 23.3022 81.8771 23.4018 81.9617 23.5044C83.6251 25.5676 84.7142 27.9479 85.3652 30.5073C85.3941 30.6166 85.3941 30.6166 85.4236 30.7281C85.999 33.0046 85.9669 35.9754 85.3652 38.2417C85.3323 38.3693 85.3323 38.3693 85.2988 38.4995C84.556 41.3181 83.2645 43.8103 81.2819 45.9572C81.1105 46.1447 80.9502 46.3341 80.793 46.5333C78.1647 49.566 73.5549 51.5431 69.5868 51.5876ZM78.0653 44.1936C79.9291 42.3734 81.1161 40.2016 81.8203 37.7046C81.857 37.5756 81.8937 37.4465 81.9315 37.3135C82.7187 33.93 82.0333 30.2052 80.2475 27.252C78.3179 24.1827 75.3469 21.9577 71.83 21.0542C71.3602 20.9569 70.8884 20.8688 70.4133 20.8011C69.7719 20.6953 69.3645 20.4684 68.9296 19.98C68.643 19.4425 68.7113 18.9483 68.8222 18.3687C68.9369 18.0082 69.0839 17.6663 69.2385 17.3213C69.2811 17.2244 69.3238 17.1274 69.3677 17.0275C70.1181 15.3503 70.9655 13.7352 72.0449 12.2456C72.0885 12.1853 72.132 12.125 72.1769 12.0629C72.7171 11.3233 73.2969 10.632 73.9258 9.96619C74.1995 9.67955 74.1995 9.67955 74.4082 9.34523C73.6051 9.56386 72.8519 9.85346 72.0919 10.1912C71.9759 10.2427 71.8599 10.2943 71.7403 10.3474C69.0736 11.5485 66.5798 12.9708 64.3105 14.8237C64.2233 14.8946 64.2233 14.8946 64.1344 14.9668C62.6639 16.1689 61.2698 17.497 60.121 19.0132C60.077 19.0699 60.033 19.1267 59.9876 19.1851C57.0718 22.9486 54.8822 27.8717 54.8318 32.6977C54.8302 32.8232 54.8302 32.8232 54.8286 32.9511C54.7876 35.5201 54.7876 35.5201 55.2871 38.0269C55.3136 38.1121 55.3401 38.1973 55.3674 38.285C56.0856 40.5241 57.2176 42.329 58.832 44.0425C58.9304 44.1513 58.9304 44.1513 59.0309 44.2624C61.3871 46.769 64.9277 47.9886 68.2985 48.1204C71.9823 48.1698 75.414 46.7119 78.0653 44.1936Z"
+                    fill="#FDF3F3"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M81.8203 37.7046C81.1161 40.2016 79.9291 42.3734 78.0653 44.1936C75.414 46.7119 71.9823 48.1698 68.2985 48.1204C64.9277 47.9886 61.3871 46.769 59.0309 44.2624L58.832 44.0425C57.2176 42.329 56.0856 40.5241 55.3674 38.285L55.2871 38.0269C54.7876 35.5201 54.7876 35.5201 54.8286 32.9511L54.8318 32.6977C54.8822 27.8717 57.0718 22.9486 59.9876 19.1851L60.121 19.0132C61.2698 17.497 62.6639 16.1689 64.1344 14.9668L64.3105 14.8237C66.5798 12.9708 69.0736 11.5485 71.7403 10.3474L72.0919 10.1912C72.8519 9.85346 73.6051 9.56386 74.4082 9.34523C74.1995 9.67955 74.1995 9.67955 73.9258 9.96619C73.2969 10.632 72.7171 11.3233 72.1769 12.0629L72.0449 12.2456C70.9655 13.7352 70.1181 15.3503 69.3677 17.0275L69.2385 17.3213C69.0839 17.6663 68.9369 18.0082 68.8222 18.3687C68.7113 18.9483 68.643 19.4425 68.9296 19.98C69.3645 20.4684 69.7719 20.6953 70.4133 20.8011C70.8884 20.8688 71.3602 20.9569 71.83 21.0542C75.3469 21.9577 78.3179 24.1827 80.2475 27.252C82.0333 30.2052 82.7187 33.93 81.9315 37.3135L81.8203 37.7046Z"
+                    fill="#FDF3F3"
+                  />
+                </svg>
+              </div>
+              <p class="stories-quote-text">
+                "Every detail felt deeply personal and timeless. Sanskriti made
+                my wedding celebrations unforgettable through craftsmanship that
+                felt..."
+              </p>
+              <div class="stories-author mt-4">
+                <p class="stories-author-name">Aditi Rao</p>
+                <p class="stories-author-category">BRIDAL COUTURE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 7th section -->
+
+      <section
+        class="journal-section w-full py-16 px-4 sm:px-8 md:px-12 lg:px-20"
+      >
+        <div
+          class="journal-header flex flex-col md:flex-row md:items-start md:justify-between mb-10 md:mb-16"
+        >
+          <div class="journal-title-wrap">
+            <h2
+              class="journal-title flex items-center flex-wrap gap-3 font-begum !text-[28px] min-[376px]:!text-[30px] min-[576px]:!text-[36px] min-[992px]:!text-[46px] min-[1301px]:!text-[56px]"
+            >
+              <span
+                class="journal-pre !text-[50px] sm:text-[40px] md:text-[48px]"
+                >THE</span
+              >
+              <span
+                class="journal-decorative !text-[50px] sm:text-[48px] md:text-[64px]"
+                >Sanskriti</span
+              >
+              <span
+                class="journal-main !text-[50px] sm:text-[40px] md:text-[48px]"
+                >JOURNAL</span
+              >
+            </h2>
+
+            <div
+              class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+            >
+              <img
+                src="images/common pattern.png"
+                alt="pattern"
+                class="block w-full"
+              />
+            </div>
+          </div>
+          <p
+            class="journal-subtitle mt-4 md:mt-0 md:max-w-sm text-center md:text-left"
+          >
+            A curated visual diary celebrating craftsmanship, culture, timeless
+            silhouettes, and moments beautifully woven through Sanskriti.
+          </p>
+        </div>
+
+        <div
+          class="journal-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+        >
+          <!-- Card 1 -->
+          <div class="journal-card relative group overflow-hidden">
+            <div class="video-box">
+              <img src="images/journal 1.png" alt="Journal video 1" />
+              <div class="vid-btn">
+                <a
+                  href="video/journal video.mp4"
+                  class="image-fancybox"
+                  data-fancybox
+                >
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="journal-overlay absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300"
+            ></div>
+            <div
+              class="journal-shop-btn absolute bottom-0 left-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0"
+            >
+              <a
+                href="#"
+                class="collection-button inline-flex items-center justify-center w-full px-6 py-4 bg-rock400-button text-white font-avenir-heavy text-[16px] hover:bg-rock950 transition-colors duration-300"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="journal-card relative group overflow-hidden">
+            <div class="video-box">
+              <img src="images/journal 2.png" alt="Journal video 3" />
+              <div class="vid-btn">
+                <a
+                  href="video/journal video.mp4"
+                  class="image-fancybox"
+                  data-fancybox
+                >
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="journal-overlay absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300"
+            ></div>
+            <div
+              class="journal-shop-btn absolute bottom-0 left-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0"
+            >
+              <a
+                href="#"
+                class="collection-button inline-flex items-center justify-center w-full px-6 py-4 bg-rock400-button text-white font-avenir-heavy text-[16px] hover:bg-rock950 transition-colors duration-300"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="journal-card relative group overflow-hidden">
+            <div class="video-box">
+              <img src="images/journal 3.png" alt="Journal video 3" />
+              <div class="vid-btn">
+                <a
+                  href="video/journal video.mp4"
+                  class="image-fancybox"
+                  data-fancybox
+                >
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="journal-overlay absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300"
+            ></div>
+            <div
+              class="journal-shop-btn absolute bottom-0 left-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0"
+            >
+              <a
+                href="#"
+                class="collection-button inline-flex items-center justify-center w-full px-6 py-4 bg-rock400-button text-white font-avenir-heavy text-[16px] hover:bg-rock950 transition-colors duration-300"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="journal-card relative group overflow-hidden">
+            <div class="video-box">
+              <img src="images/journal 4.png" alt="Journal video 4" />
+              <div class="vid-btn">
+                <a
+                  href="video/journal video.mp4"
+                  class="image-fancybox"
+                  data-fancybox
+                >
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="journal-overlay absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300"
+            ></div>
+            <div
+              class="journal-shop-btn absolute bottom-0 left-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-full group-hover:translate-y-0"
+            >
+              <a
+                href="#"
+                class="collection-button inline-flex items-center justify-center w-full px-6 py-4 bg-rock400-button text-white font-avenir-heavy text-[16px] hover:bg-rock950 transition-colors duration-300"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- newsletter -->
+      <section
+        class="newsletter-section w-full py-16 px-4 sm:px-8 md:px-12 lg:px-20"
+      >
+        <div class="newsletter-container">
+          <div class="newsletter-grid">
+            <div class="newsletter-content">
+              <h2
+                class="newsletter-title font-begum !text-[28px] min-[376px]:!text-[30px] min-[576px]:!text-[36px] min-[992px]:!text-[46px] min-[1301px]:!text-[56px]"
+              >
+                Join The
+                <span class="newsletter-decorative">Editorial</span> List
+              </h2>
+              <div class="newsletter-divider">
+                <div
+                  class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+                >
+                  <img
+                    src="images/common pattern.png"
+                    alt="pattern"
+                    class="block w-full"
+                  />
+                </div>
+              </div>
+              <form class="newsletter-form" id="newsletterForm">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    id="emailInput"
+                    placeholder="Enter your email address"
+                    autocomplete="off"
+                  />
+                  <button type="button" id="submitBtn" class="submit-btn">
+                    Explore Collection
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                </div>
+                <p class="form-message" id="formMessage"></p>
+              </form>
+            </div>
+            <div class="newsletter-info">
+              <p class="newsletter-text">
+                Receive exclusive collection previews, couture stories, festive
+                edits, and timeless inspirations from the world of Sanskriti.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="site-footer">
+      <img src="images/Footer-bg.png" alt="" class="footer-bg-img" />
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img
+                src="images/logo-footer.png"
+                alt="Sanskruti Logo"
+                class="footer-logo-img"
+              />
+            </div>
+            <div class="footer-heading">
+              Timeless craftsmanship. Unforgettable celebrations.
+            </div>
+            <div
+              class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+            >
+              <img
+                src="images/common pattern.png"
+                alt="pattern"
+                class="block w-full"
+              />
+            </div>
+            <p class="footer-description">
+              Sanskruti is where heritage artistry meets contemporary elegance —
+              thoughtfully crafted for weddings, festivities, and moments that
+              deserve timeless beauty.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-link-column">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="about-us.html">About us</a></li>
+              </ul>
+            </div>
+            <div class="footer-link-column">
+              <ul>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Bridal Couture</a></li>
+                <li><a href="#">Festive Edit</a></li>
+                <li><a href="#">Raasleela Atelier</a></li>
+                <li><a href="#">Occasion Wear</a></li>
+                <li><a href="#">Heritage Weaves</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Signature Series</a></li>
+              </ul>
+            </div>
+            <div class="footer-link-column">
+              <ul>
+                <li><a href="#">Customer Care</a></li>
+                <li><a href="#">Craftsmanship</a></li>
+                <li><a href="#">Care Journal</a></li>
+                <li><a href="#">Care Guide</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping & Delivery</a></li>
+                <li><a href="#">Returns & Exchange</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-boutique">
+            <div
+              class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+            >
+              <img
+                src="images/common pattern.png"
+                alt="pattern"
+                class="block w-full"
+              />
+            </div>
+            <div class="boutique-title">Boutique</div>
+            <div class="boutique-info">
+              <div class="boutique-address">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <p>
+                  Sanskruti Boutique 212 Emporio, Vasant Kunj New Delhi — 110070
+                </p>
+              </div>
+              <div class="boutique-phone">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <a href="tel:+91 11 4100 5678">+91 11 4100 5678</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" rel="noopener"
+            >Instagram</a
+          >
+          <a href="https://pinterest.com" target="_blank" rel="noopener"
+            >Pinterest</a
+          >
+          <a href="https://facebook.com" target="_blank" rel="noopener"
+            >Facebook</a
+          >
+          <a href="https://youtube.com" target="_blank" rel="noopener"
+            >YouTube</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <!-- fancybox -->
+    <script>
+      $(document).ready(function () {
+        $(".image-fancybox").fancybox({
+          type: "iframe",
+          iframe: {
+            css: {
+              width: "80%",
+              height: "80%",
+            },
+          },
+          closeBtn: true,
+          helpers: {
+            overlay: {
+              opacity: 0.9,
+            },
+          },
+        });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

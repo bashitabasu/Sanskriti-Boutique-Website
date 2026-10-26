@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- external css -->
+     <link rel="stylesheet" href="style.css" />
+    <title>signup page</title>
+</head>
+<body>
+    <main>
+<section class="login-page relative min-h-screen w-full overflow-hidden ">
+
+  <img
+    src="images/Login.jpg"
+    alt=""
+    class="login-background fixed  inset-0 h-full w-full object-cover "
+  />
+
+  <div class="login-container relative z-10 min-h-screen w-full">
+
+    <div class="login-card">
+
+      <div class="login-heading">
+
+        <h2>
+          WELCOME BACK
+        </h2>
+
+        <p>
+        Sign in to continue your journey through heritage collections, saved pieces, and ceremonial stories.
+        </p>
+
+      </div>
+
+      <div class="login-line"></div>
+
+      <form id="loginForm" novalidate>
+
+        <div class="login-field">
+          <label for="email">
+            EMAIL ADDRESS
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter Your Email"
+            class="login-input"
+          />
+
+          <p id="emailError" class="login-error hidden"></p>
+        </div>
+
+        <div class="login-field password-field">
+
+          <label for="password">
+            PASSWORD
+          </label>
+
+          <div class="password-box">
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter Your Password"
+              class="login-input"
+            />
+
+            <button
+              type="button"
+              id="passwordToggle"
+              class="password-toggle"
+              aria-label="Show password"
+            >
+              <i id="passwordIcon" class="fa-solid fa-eye-slash"></i>
+            </button>
+
+          </div>
+
+          <p id="passwordError" class="login-error hidden"></p>
+
+        </div>
+         <div class="login-field password-field">
+
+          <label for="password">
+            CONFIRM PASSWORD
+          </label>
+
+          <div class="password-box">
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter Your Password"
+              class="login-input"
+            />
+
+            <button
+              type="button"
+              id="passwordToggle"
+              class="password-toggle"
+              aria-label="Show password"
+            >
+              <i id="passwordIcon" class="fa-solid fa-eye-slash"></i>
+            </button>
+
+          </div>
+
+          <p id="passwordError" class="login-error hidden"></p>
+
+        </div>
+        <div class="login-options pt-5">
+
+          <label class="remember-box 
+          ">
+
+            <input
+              type="checkbox"
+              id="rememberMe"
+              class="login-checkbox"
+            />
+
+            <span>
+              Remember Me
+            </span>
+
+          </label>
+
+          <a
+            href="#"
+            class="forgot-password"
+          >
+            Forgot Password ?
+          </a>
+
+        </div>
+
+         <button
+          type="button"
+          class="collection-button login-button !pt-2"
+          onclick="window.open('login.html', '_blank')"
+        >
+          Sign In
+        </button>
+
+        <p id="loginMessage" class="login-message hidden"></p>
+       <div class="continue-line mt-3">
+
+          <span></span>
+
+          <p>
+           OR
+          </p>
+
+          <span></span>
+
+        </div>
+        <a href="sign-up.html" target="_blank"/>
+          <button
+          type="submit"
+          class="collection-button login-button mt-2"
+        >
+          Sign Up
+        </button>
+        </a>
+      </form>
+
+      <div class="login-social-section">
+
+        <div class="continue-line">
+
+          <span></span>
+
+          <p>
+            or continue with
+          </p>
+
+          <span></span>
+
+        </div>
+
+        <div class="social-login">
+
+          <a
+            href="https://www.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon google-icon"
+            aria-label="Google"
+          >
+            <i class="fa-brands fa-google"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon facebook-icon"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a
+            href="https://www.apple.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon apple-icon"
+            aria-label="Apple"
+          >
+            <i class="fa-brands fa-apple"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+</main>
+
+    <!-- tailwind js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- js cdn -->
+    <script src="script.js"></script>
+</body>
+</html>

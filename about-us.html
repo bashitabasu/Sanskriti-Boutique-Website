@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css" />
+    <title>about-us page</title>
+  </head>
+  <body>
+    <header class="top-0 left-0 z-30 w-full bg-[var(--sapia-black950)]">
+      <div
+        class="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 sm:px-8 lg:px-10"
+      >
+        <a href="index.html" class="logo shrink-0">
+          <img
+            src="images/logo.png"
+            alt="Heritage logo"
+            class="block w-[204px] max-[868px]:w-[100px] max-[576px]:w-[80px]"
+          />
+        </a>
+
+        <nav class="hidden items-center lg:flex">
+          <a
+            href="index.html"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+          >
+            Home
+          </a>
+
+          <a
+            href="#"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+          >
+            Collections
+          </a>
+
+          <a
+            href="#"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+          >
+            What's New
+          </a>
+
+          <a
+            href="journal.html"
+            class="nav-link max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+          >
+            Journal
+          </a>
+
+          <a
+            href="about-us.html"
+            class="nav-link active max-[1300px]:!mr-[30px] max-[1300px]:!text-[16px]"
+          >
+            About us
+          </a>
+        </nav>
+
+        <div class="hidden items-center gap-4 lg:flex">
+          <a href="#" class="icon-link" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+
+          <a href="#" class="icon-link" aria-label="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </a>
+
+          <a
+            href="login.html"
+            target="_blank"
+            class="icon-link"
+            aria-label="Account"
+          >
+            <i class="fa-regular fa-user"></i>
+          </a>
+
+          <a href="#" class="icon-link" aria-label="Shopping bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </a>
+        </div>
+
+        <button
+          type="button"
+          id="menuButton"
+          aria-label="Open menu"
+          aria-expanded="false"
+          class="flex h-8 w-8 items-center justify-center !text-[#F7F4EF] lg:hidden"
+        >
+          <i class="fa-solid fa-bars text-sm"></i>
+        </button>
+      </div>
+    </header>
+
+    <div
+      id="mobileOverlay"
+      class="pointer-events-none fixed inset-0 z-40 bg-black/50 opacity-0 transition-opacity duration-300 lg:hidden"
+    ></div>
+
+    <aside
+      id="mobileMenu"
+      aria-hidden="true"
+      class="fixed top-0 right-0 z-50 h-full w-[300px] max-w-[86%] translate-x-full bg-[#8c5e47] px-6 py-6 shadow-2xl transition-transform duration-300 ease-in-out lg:hidden"
+    >
+      <div class="flex items-center justify-between">
+        <img
+          src="images/logo.png"
+          alt="Heritage logo"
+          class="block max-w-[150px]"
+        />
+
+        <button
+          type="button"
+          id="closeMenu"
+          aria-label="Close menu"
+          class="flex h-8 w-8 items-center justify-center !text-[#260808]"
+        >
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <nav class="mt-12 flex flex-col gap-6">
+        <a href="index.html" class="nav-link !mr-0 !w-max !text-[#4B1912]">
+          Home
+        </a>
+
+        <a href="#" class="nav-link !mr-0 !w-max !text-[#4B1912]">
+          Collections
+        </a>
+
+        <a href="#" class="nav-link !mr-0 !w-max !text-[#4B1912]">
+          What's New
+        </a>
+
+        <a href="journal.html" class="nav-link !mr-0 !w-max !text-[#4B1912]"> Journal </a>
+
+        <a
+          href="about-us.html"
+          class="nav-link active !mr-0 !w-max !text-[#4B1912]"
+        >
+          About us
+        </a>
+      </nav>
+
+      <div class="mt-10 flex items-center gap-6">
+        <a href="#" class="icon-link !mr-0 !text-[#6f2c1f]">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <a href="#" class="icon-link !mr-0 !text-[#6f2c1f]">
+          <i class="fa-regular fa-heart"></i>
+        </a>
+
+        <a
+          href="login.html"
+          target="_blank"
+          class="icon-link !mr-0 !text-[#6f2c1f]"
+        >
+          <i class="fa-regular fa-user"></i>
+        </a>
+
+        <a href="#" class="icon-link !mr-0 !text-[#6f2c1f]">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </a>
+      </div>
+    </aside>
+    <main>
+      <section class="relative h-[579px] w-full overflow-hidden">
+        <img
+          src="images/about-us hero.png"
+          alt="heritage image"
+          class="absolute inset-0 block h-full w-full object-cover object-center"
+        />
+
+      
+<div class="absolute inset-0">
+  <div class="relative mx-auto h-full w-full max-w-[1440px] px-5 sm:px-8 lg:px-10 text-white">
+    <div class="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center">
+      <h1 class="!m-0 !block !w-max !max-w-full !whitespace-nowrap !text-center !text-[38px] min-[376px]:!text-[40px] min-[426px]:!text-[48px] min-[576px]:!text-[48px] min-[769px]:!text-[58px] min-[868px]:!text-[68px] min-[1025px]:!text-[82px] min-[1201px]:!text-[96px] min-[1301px]:!text-[110px]">
+        THE STORY OF
+      </h1>
+
+      <div class="!m-0 !mt-[3px] !block !w-max !max-w-full !whitespace-nowrap !text-center !font-['samarkan'] !font-normal !leading-[0.85] !tracking-normal !text-[36px] min-[376px]:!text-[38px] min-[426px]:!text-[40px] min-[576px]:!mt-[5px] min-[576px]:!text-[42px] min-[769px]:!mt-[7px] min-[769px]:!text-[45px] min-[868px]:!text-[51px] min-[1025px]:!mt-[9px] min-[1025px]:!text-[63px] min-[1201px]:!mt-[11px] min-[1201px]:!text-[73px] min-[1301px]:!mt-[13px] min-[1301px]:!text-[87px]">
+        sanskriti
+      </div>
+
+      <div class="heading-ornament !mx-auto !mt-[12px] !block !w-[95px] !max-w-full min-[376px]:!w-[115px] min-[426px]:!w-[135px] min-[576px]:!mt-[18px] min-[576px]:!w-[175px] min-[769px]:!mt-[20px] min-[769px]:!w-[205px] min-[868px]:!w-[225px] min-[1025px]:!mt-[23px] min-[1025px]:!w-[245px] min-[1201px]:!w-[265px] min-[1301px]:!mt-[25px] min-[1301px]:!w-[285px]">
+        <img src="images/common pattern.png" alt="pattern" class="!block !w-full" />
+      </div>
+    </div>
+
+    <div class="absolute left-1/2 top-[78%] w-full -translate-x-1/2 -translate-y-1/2 text-center min-[576px]:top-[80%] min-[769px]:top-[82%] min-[1025px]:top-[84%] min-[1201px]:top-[86%]">
+      <p class="hero-copy !mx-auto !m-0 !w-[220px] !max-w-full !text-center !text-[#875e47] !font-['avenir-body'] !font-normal !leading-[1.4] !tracking-normal !text-[11px] min-[376px]:!w-[250px] min-[426px]:!w-[290px] min-[426px]:!text-[12px] min-[576px]:!w-[360px] min-[576px]:!text-[12px] min-[769px]:!w-[420px] min-[769px]:!text-[13px] min-[868px]:!w-[460px] min-[868px]:!text-[14px] min-[1025px]:!w-[520px] min-[1025px]:!text-[15px] min-[1201px]:!w-[600px] min-[1201px]:!text-[16px] min-[1301px]:!w-[673px]">
+        Rooted in heritage and shaped through craftsmanship, Sanskriti celebrates timeless Indian artistry through ceremonial drapes, handwoven textiles, and contemporary expressions inspired by tradition.
+      </p>
+    </div>
+  </div>
+</div>
+
+      </section>
+      <!-- 1st section -->
+      <section class="w-full bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr]">
+          <div class="relative w-full bg-[#1a0a0a] overflow-hidden">
+            <img
+              src="images/about-us1.png"
+              alt=""
+              class="block w-full h-auto object-cover"
+            />
+
+            <div
+             
+class="absolute top-[8%] left-1/2 z-10 w-[90%] -translate-x-1/2 text-center sm:left-auto sm:right-10 sm:top-10 sm:w-auto sm:translate-x-0 sm:text-right lg:right-12 lg:top-12"
+
+            >
+              <h2
+                class="font-['begum'] !text-[56px] sm:text-[32px] md:text-[40px] lg:text-[50px] text-[var(--rock200)] leading-[1.1] tracking-[-0.02em]"
+              >
+                The Art Of Making
+              </h2>
+              <div
+               
+
+class="font-['begum'] italic !text-[20px] min-[376px]:!text-[22px] min-[426px]:!text-[24px] min-[576px]:!text-[28px] min-[769px]:!text-[34px] lg:!text-[40px] text-[var(--rock200)] leading-[1.1] mt-2 sm:mt-3"
+
+
+              >
+                Craft Rooted In Every Thread
+              </div>
+              <div
+               
+class="mx-auto mt-3 w-full max-w-[120px] sm:ml-auto sm:mr-0 sm:max-w-[160px] lg:max-w-[200px]"
+
+              >
+                <img
+                  src="images/common pattern.png"
+                  alt=""
+                  class="block w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#f5f0eb] flex items-center px-[72px] sm:px-10 lg:px-14 py-12 lg:py-16"
+          >
+            <div class="flex flex-col gap-6 w-full max-w-[394px] text-center sm:text-right">
+              <p
+                class="font-['avenir-body'] text-[14px] sm:text-[16px] lg:text-[18px] text-[#593c34] leading-[1.6] m-0"
+              >
+                Every creation at Sanskriti begins with a deep respect for
+                India's textile heritage. From handwoven Banarasi narratives to
+                intricate Jamdani patterns and ceremonial embroidery, each piece
+                is shaped through traditions carried across generations of
+                artisans.
+              </p>
+              <p
+                class="font-['avenir-body'] text-[14px] sm:text-[16px] lg:text-[18px] text-[#593c34] leading-[1.6] m-0"
+              >
+                We work closely with skilled craftspeople whose techniques
+                preserve the spirit of heritage dressing. Through weaving, zari
+                work, hand finishing, and thoughtful detailing, every creation
+                becomes more than attire — it becomes a story woven with memory,
+                devotion, and timeless artistry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 2nd section -->
+      <section class="w-full bg-[#faf6f1]">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr]">
+          <div
+            class="flex items-center px-6 sm:px-10 lg:px-16 xl:px-20 py-12 lg:py-20"
+          >
+            <div class="w-full max-w-[520px] text-center lg:text-left">
+              <h2
+              
+class="font-['begum'] !text-[32px] min-[376px]:!text-[34px] min-[426px]:!text-[36px] min-[576px]:!text-[40px] min-[769px]:!text-[44px] lg:!text-[56px] text-[#2e1c1a] leading-[1.1] tracking-[-0.02em]"
+
+              >
+                Impressions
+              </h2>
+              <div
+               class="font-['begum'] !text-[25px] min-[376px]:!text-[27px] min-[426px]:!text-[29px] min-[576px]:!text-[32px] min-[769px]:!text-[35px] lg:!text-[40px] text-[#2e1c1a] leading-[1.1] mt-2 sm:mt-3"
+              >
+                of Heritage Rooted in Craft
+              </div>
+
+              <div
+               class="mx-auto mt-3 mb-5 w-full max-w-[150px] sm:mb-6 sm:mt-4 sm:max-w-[220px] lg:mx-0 lg:mb-8 lg:max-w-[260px]"
+              >
+                <img
+                  src="images/common pattern.png"
+                  alt="pattern"
+                  class="block w-full h-auto"
+                />
+              </div>
+
+              <p
+                class="font-['avenir-body'] text-[#593c34] text-[14px] sm:text-[16px] lg:text-[18px] leading-[1.6] mb-6 text-center lg:text-left"
+              >
+                At Sanskriti, heritage lives through detail — in every weave,
+                every motif, and every ceremonial silhouette shaped through
+                generations of artistry. Our philosophy is rooted in preserving
+                India's textile traditions while creating timeless expressions
+                designed for modern celebrations.
+              </p>
+
+              <p
+                class="font-['avenir-body'] text-[#593c34] text-[14px] sm:text-[16px] lg:text-[18px] leading-[1.6] m-0 text-center lg:text-left"
+              >
+                We believe craftsmanship carries memory. Through handwoven
+                textiles, artisanal techniques, and thoughtful creation, each
+                piece becomes more than attire — it becomes a continuation of
+                culture, ritual, and story.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative w-full !h-[800px] mt-1 sm:h-[400px] lg:h-auto lg:min-h-[600px]"
+          >
+            <img
+              src="images/about-us2.png"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- 3rd section -->
+      <section class="w-full bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-2 border-t border-[#eae2d7]">
+          <div
+            class="flex flex-col sm:flex-row border-b lg:border-b-0 lg:border-r border-[#eae2d7]"
+          >
+            <div class="w-full sm:w-5/12 h-[200px] sm:h-[400px]">
+              <img
+                src="images/about-us3.png"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="w-full sm:w-7/12 p-8 sm:p-12 lg:p-16 flex flex-col justify-center "
+            >
+              <div
+                class="font-['begum'] !text-[32px] lg:!text-[32px] max-w-[294px] sm:text-[36px]  text-[var(--rock900)] leading-[1.1] tracking-[-0.02em] mb-4"
+              >
+                Crafted Through Legacy
+              </div>
+              <p
+                class="font-['avenir-body'] !text-[18px] sm:text-[15px] text-[#593c34] leading-[1.6] mb-6"
+              >
+                Discover the beauty of ceremonial dressing shaped through
+                heritage craftsmanship, contemporary elegance, and timeless
+                Indian artistry.
+              </p>
+              <a
+                href="#"
+                class="font-['avenir-roman'] !text-[18px] sm:text-[16px] text-[#6D493B] flex items-center gap-2 group w-fit"
+              >
+                Know more
+                <svg
+                  class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center justify-center p-8 sm:p-12 lg:p-20 bg-white"
+          >
+            <div
+              class="font-['begum'] !text-[38px] !max-w-[816px] sm:text-[36px] lg:text-[42px] text-[var(--potters-clay600)] text-center leading-[1.2]"
+            >
+              The beauty of tradition lives in every carefully made detail
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 4th section -->
+      <section
+        class="relative w-full min-h-[500px] flex items-center justify-center overflow-hidden bg-[#e8dfd5]"
+      >
+        <img
+          src="images/Brand Philosophy-bg.png"
+          alt=""
+          class="absolute inset-0 w-full h-full object-cover z-0"
+        />
+        <div
+          class="relative z-10 flex flex-col items-center justify-center px-4 py-16 sm:py-24 w-full"
+        >
+          <h3
+            class="font-['begum'] !text-[40px] sm:text-[32px] text-[#8C5E47] uppercase tracking-[0.1em] mb-8 sm:mb-10 text-center"
+          >
+            A Note From The Founder
+          </h3>
+          <p
+            class="font-['avenir-body'] text-[18px] leading-[22px] text-[#8C5E47] text-center w-[500px] max-w-full mx-auto mb-10 h-auto lg:h-[176px]"
+          >
+            Sanskriti was created with the belief that craftsmanship deserves to
+            remain part of everyday celebration. Every weave carries history,
+            every motif holds memory, and every collection becomes a bridge
+            between the past and the present. Our vision is to preserve India’s
+            rich textile artistry while creating pieces that continue these
+            stories for future generations. This style is much closer to the
+            reference: large poetic heading + compact editorial paragraphs +
+            emotional craft narrative.
+          </p>
+
+          <img
+            src="images/sign.png"
+            alt="Signature"
+            class="w-[100px] sm:w-[120px] h-auto mx-auto mb-3"
+          />
+
+          <p
+            class="font-['avenir-medium'] text-[12px] text-[var(--rock400-price)] uppercase tracking-wider"
+          >
+            Founder , Sanskriti Boutique
+          </p>
+        </div>
+      </section>
+    </main>
+      <footer class="site-footer">
+      <img src="images/Footer-bg.png" alt="" class="footer-bg-img" />
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img
+                src="images/logo-footer.png"
+                alt="Sanskruti Logo"
+                class="footer-logo-img"
+              />
+            </div>
+            <div class="footer-heading">
+              Timeless craftsmanship. Unforgettable celebrations.
+            </div>
+            <div
+              class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+            >
+              <img
+                src="images/common pattern.png"
+                alt="pattern"
+                class="block w-full"
+              />
+            </div>
+            <p class="footer-description">
+              Sanskruti is where heritage artistry meets contemporary elegance —
+              thoughtfully crafted for weddings, festivities, and moments that
+              deserve timeless beauty.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-link-column">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="about-us.html">About us</a></li>
+              </ul>
+            </div>
+            <div class="footer-link-column">
+              <ul>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Bridal Couture</a></li>
+                <li><a href="#">Festive Edit</a></li>
+                <li><a href="#">Raasleela Atelier</a></li>
+                <li><a href="#">Occasion Wear</a></li>
+                <li><a href="#">Heritage Weaves</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Signature Series</a></li>
+              </ul>
+            </div>
+            <div class="footer-link-column">
+              <ul>
+                <li><a href="#">Customer Care</a></li>
+                <li><a href="#">Craftsmanship</a></li>
+                <li><a href="#">Care Journal</a></li>
+                <li><a href="#">Care Guide</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping & Delivery</a></li>
+                <li><a href="#">Returns & Exchange</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-boutique">
+            <div
+              class="heading-ornament !mx-auto !mt-[30px] !w-[180px] !max-w-full min-[576px]:!w-[220px] min-[769px]:!w-[261px] min-[992px]:!mx-0"
+            >
+              <img
+                src="images/common pattern.png"
+                alt="pattern"
+                class="block w-full"
+              />
+            </div>
+            <div class="boutique-title">Boutique</div>
+            <div class="boutique-info">
+              <div class="boutique-address">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <p>
+                  Sanskruti Boutique 212 Emporio, Vasant Kunj New Delhi — 110070
+                </p>
+              </div>
+              <div class="boutique-phone">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <a href="tel:+91 11 4100 5678">+91 11 4100 5678</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" rel="noopener"
+            >Instagram</a
+          >
+          <a href="https://pinterest.com" target="_blank" rel="noopener"
+            >Pinterest</a
+          >
+          <a href="https://facebook.com" target="_blank" rel="noopener"
+            >Facebook</a
+          >
+          <a href="https://youtube.com" target="_blank" rel="noopener"
+            >YouTube</a
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- tailwind js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- js cdn -->
+    <script src="script.js"></script>
+  </body>
+</html>
