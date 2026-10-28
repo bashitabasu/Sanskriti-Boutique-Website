@@ -3536,3 +3536,6 @@ font-size: 12px;}
     text-align: center;
   }
 }
+.accordion-content{
+  text-align: left;
+}
