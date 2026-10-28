@@ -2954,7 +2954,12 @@ font-size: 12px;}
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
+.journal-toolbar-title{
+  font-family: "avenir-heavy";
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 .journal-hero-title {
   width:430px;
   margin-top: 20px;
